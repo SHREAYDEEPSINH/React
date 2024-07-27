@@ -1,0 +1,252 @@
+.use-cases-section {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .use-cases-header {
+    width: 1280px;
+    height: 91px;
+    padding-right: 250px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .use-cases-title {
+    align-self: stretch;
+    color: #caff33;
+    font-size: 38px;
+    font-family: "Lexend";
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+  
+  .use-cases-subtitle {
+    align-self: stretch;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-family: "Lexend";
+    font-weight: 300;
+    word-wrap: break-word;
+  }
+  
+
+
+
+
+  .use-cases-content {
+    width: 1280px;
+    height: 414px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+    margin-top: 60px;
+  
+  }
+  .use-cases-cards-main{
+    width: 610px;
+    height: 414px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: url(../Assets/bakgroundDots.png);
+    background-repeat: no-repeat;
+    background-position-x:100% ;
+  }
+  .use-cases-cards-main-1{
+    background-image: url(../Assets/bakgroundDots.png);
+    background-repeat: no-repeat;
+    background-position-x:0% ;
+  }
+  
+  .use-cases-cards {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .use-case-card {
+    flex: 1 1 0;
+    padding: 24px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    width: 260px;
+    height: 174px;
+  }
+  .use-case-card-2{
+    width: 260px;
+    height: 150px;
+  }
+  
+  .use-case-icon-container {
+    padding: 8px;
+    background: linear-gradient(
+      180deg,
+      rgba(202.47, 255, 51, 0.05) 0%,
+      rgba(202.47, 255, 51, 0) 100%
+    );
+    border-radius: 70px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .use-case-icon {
+    padding: 12px;
+    background: linear-gradient(
+      180deg,
+      rgba(202.47, 255, 51, 0.1) 0%,
+      rgba(202.47, 255, 51, 0) 47%
+    );
+    border-radius: 50px;
+    border: 1px solid rgba(202.47, 255, 51, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .icon-inner {
+    width: 24px;
+    height: 24px;
+    position: relative;
+  }
+  
+  .icon-content {
+    width: 19.5px;
+    height: 19.5px;
+    left: 2.25px;
+    top: 2.25px;
+    position: absolute;
+    background: #caff33;
+  }
+  
+  .use-case-text {
+    align-self: stretch;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: "Lexend";
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .use-cases-stats {
+    width: 610px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  
+  .use-cases-stats-content {
+    align-self: stretch;
+    height: 405px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  
+  .use-cases-stats-header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .stats-title {
+    align-self: stretch;
+    color: white;
+    font-size: 26px;
+    font-family: "Lexend";
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+  
+  .stats-description {
+    align-self: stretch;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-family: "Lexend";
+    font-weight: 300;
+    word-wrap: break-word;
+  }
+  
+  .stats-cards {
+    align-self: stretch;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  
+  .stats-card {
+    flex: 1 1 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .stats-percentage {
+    width: 136px;
+    align-self: stretch;
+    color: #caff33;
+    font-size: 40px;
+    font-family: "Lexend";
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+  
+  .stats-text {
+    align-self: stretch;
+    color: #b3b3b3;
+    font-size: 15px;
+    font-family: "Lexend";
+    font-weight: 300;
+    word-wrap: break-word;
+  }
+  
+  .stats-separator {
+    width: 111px;
+    align-self: stretch;
+    transform-origin: 0 0;
+    border: 1px dotted #262626;
+  }
+  
+  .learn-more-button {
+    padding: 14px 20px;
+    background: #1c1c1c;
+    border-radius: 82px;
+    border: 1px solid #262626;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .learn-more-text {
+    color: white;
+    font-size: 14px;
+    font-family: "Lexend";
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  

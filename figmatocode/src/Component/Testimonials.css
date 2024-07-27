@@ -1,0 +1,235 @@
+.testimonials-section {
+    width: 1280px;
+    height: 481px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.testimonials-header {
+    display: flex;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 150px;
+}
+
+.testimonials-header-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.testimonials-title {
+    display: flex;
+    align-self: stretch;
+}
+
+.title-white {
+    color: white;
+    font-size: 38px;
+    font-family: 'Lexend';
+    font-weight: 500;
+    line-height: 57px;
+    word-wrap: break-word;
+}
+
+.title-green {
+    color: #CAFF33;
+    font-size: 38px;
+    font-family: 'Lexend';
+    font-weight: 500;
+    line-height: 57px;
+    word-wrap: break-word;
+}
+
+.testimonials-description {
+    align-self: stretch;
+    color: #B3B3B3;
+    font-size: 14px;
+    font-family: 'Lexend';
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.testimonials-header-right {
+    display: flex;
+    padding: 12px;
+    background: #1C1C1C;
+    border-radius: 82px;
+    border: 1px #262626 solid;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.testimonial-button {
+    display: flex;
+}
+
+.button-individuals, .button-businesses {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 140px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.button-individuals {
+    background: #CAFF33;
+}
+
+.button-businesses {
+    background: transparent;
+}
+
+.button-text {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Lexend';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.button-individuals .button-text {
+    color: #1C1C1C;
+}
+
+.button-businesses .button-text {
+    color: white;
+}
+
+.testimonials-content {
+    display: flex;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.testimonials-navigation {
+    display: flex;
+    padding: 12px;
+    background: #1C1C1C;
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1px #262626 solid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.navigation-button {
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.navigation-button::before {
+    content: '';
+    width: 14.58px;
+    height: 14px;
+    position: absolute;
+    border: 1.5px #CAFF33 solid;
+}
+
+.navigation-button::after {
+    content: '';
+    width: 14.58px;
+    height: 14px;
+    position: absolute;
+    border: 1.5px #CAFF33 solid;
+    transform: rotate(180deg);
+}
+
+.testimonials-cards {
+    flex: 1;
+    height: 292px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+    position: relative;
+}
+
+.testimonial-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-top {
+    display: flex;
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.line {
+    flex: 1;
+    height: 0;
+    border: 1px #262626 solid;
+}
+
+.icon {
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.icon::before {
+    content: '';
+    width: 36.24px;
+    height: 28.47px;
+    position: absolute;
+    background: linear-gradient(180deg, #CAFF33 0%, #191919 100%);
+    border-radius: 1px;
+    border: 1px #CAFF33 solid;
+}
+
+.card-content {
+    align-self: stretch;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: 'Lexend';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.card-author {
+    align-self: stretch;
+    text-align: center;
+    color: #CAFF33;
+    font-size: 16px;
+    font-family: 'Lexend';
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.testimonial-gradient-left {
+    width: 398px;
+    height: 291px;
+    position: absolute;
+    background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, #191919 100%);
+}
+
+.testimonial-gradient-right {
+    width: 358px;
+    height: 291px;
+    position: absolute;
+    background: linear-gradient(270deg, #191919 10%, rgba(25, 25, 25, 0) 100%);
+    right: 0;
+}

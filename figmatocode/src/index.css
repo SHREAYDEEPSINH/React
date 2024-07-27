@@ -1,0 +1,16 @@
+body{
+  background-color: #1A1A1A;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  background-image: url(./Assets/Objects.png);
+  background-repeat: no-repeat;
+}
+.container{
+  width: 90%;
+}
+.bgyellow{
+  background-color: #CAFF33;
+}
+
