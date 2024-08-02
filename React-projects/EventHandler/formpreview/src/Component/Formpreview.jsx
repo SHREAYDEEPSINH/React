@@ -49,8 +49,7 @@ function Formpreview() {
     return (
         <>
             <h1 className='text-center my-3'>Form Data Preview</h1>
-          
-                <form onSubmit={e => e.preventDefault()} className=' border bg-info bg-gradient border-2 rounded-3 my-2 p-4  m-auto' style={{ width: "350px" }}>
+                <form onSubmit={e => e.preventDefault()} className=' border bg-primary bg-opacity-50 bg-gradient border-2 rounded-3 my-2 p-4 m-auto' style={{ width: "380px" }}>
                     <div className="mb-3">
                         <label className="form-label">Frist Name</label>
                         <input type="text" name='firstName' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={form.firstname} onChange={haldelFirstName} />
@@ -79,11 +78,8 @@ function Formpreview() {
                 </form>
 
 
-
-
-
-                <table className="table w-25 text-center m-auto" >
-                    <tbody className=''>
+                <table className="table w-25 m-auto table-primary table-striped" >
+                    <tbody>
                         <tr>
                             <th>Name :</th>
                             <td>{form.firstname} {form.lastname}</td>
