@@ -112,8 +112,26 @@
 }
 
 
+/* menu section  */
 
 .menu-back-img{
+  height: auto;
   background-image: url(./Assets/Menu-back-img.jpg);
+  /* background-repeat: no-repeat; */
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+ background-color: transparent !important;
+ color: #CC3333 !important;
+ border-bottom: 2px solid #CC3333 ;
+ border-radius: 0;
+}
+
+
+
+
+.order-back-img{
+  background-image: url(./Assets/order-back-img.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }

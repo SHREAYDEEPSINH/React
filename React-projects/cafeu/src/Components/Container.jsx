@@ -4,6 +4,7 @@ import Qualitycards from './Qualitycards'
 import SpecialOffers from './SpecialOffers'
 import Aboutus from './Aboutus'
 import Menu from './Menu'
+import Order from './Order'
 
 function Container() {
   return (
@@ -13,6 +14,7 @@ function Container() {
         <SpecialOffers/>
         <Aboutus/>
         <Menu/>
+        <Order/>
     </div>
   )
 }

@@ -1,0 +1,16 @@
+body [data-bs-theme ="Green"] {
+    background-color: green;
+    color: white;
+}
+body [data-bs-theme ="Yellow"] {
+    background-color: rgb(246, 255, 0);
+    color: rgb(0, 0, 0);
+}
+body [data-bs-theme ="Blue"] {
+    background-color: rgb(0, 119, 255);
+    color: rgb(255, 255, 255);
+}
+body [data-bs-theme ="Red"] {
+    background-color: rgb(255, 51, 0);
+    color: rgb(0, 0, 0);
+}
