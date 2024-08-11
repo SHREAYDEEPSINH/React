@@ -1,56 +1,66 @@
 import React, { useState } from 'react'
 
+let nextId = 0;
 function Todolist() {
 
-    const [userInput, setUserInput] = useState("")
-    const [data, setData] = useState([])  // array for multiple Data
+    let [task, setTask] = useState("");
+    let [items, setItems] = useState([]);
+    let [editId, setEditId] = useState(null);
 
-
-    function addHendler(e) {
-        setUserInput(e.target.value)
+    function addHandler() {
+        if (task !== "") {
+            setItems([...items, { id: nextId++, task: task }])
+            setTask("")
+        } else {
+            alert("Enter value")
+        }
     }
 
-    function rendering(e) {
-        setData([...data, userInput]);   //spread opretor for previus data
-        setUserInput("")
-    }
-
-    const finalData = data.map((ele, ind) => (
-        <li key={ind} className='d-flex justify-content-between p-2 border-bottom border-2 border-black'>
-            {ele}
+    let finalData = items.map((item) =>
+        <li key={item.id} className='d-flex justify-content-between my-2'>
+            {item.task}
             <span>
-                <button type="button" className="btn btn-success" onClick={() =>editHendler(ind)}>Edit</button>
-                <button type="button" className="btn btn-success ms-2" onClick={() =>deleteHendler(ind)}>Delete</button>
+                <button className='btn btn-info' onClick={() => editHendler(item.id, item.task)}>Edit</button>
+                <button className='btn btn-info ms-2' onClick={() => deleteHendler(item.id)}>Delete</button>
             </span>
         </li>
-    ))
+    )
 
-    function deleteHendler(index){
-        console.log(index);
-        data.splice(index,1)
-        setData([...data]);
+    function deleteHendler(id) {
+        setItems(items.filter((e) => e.id !== id))
+        console.log("deleted");
     }
 
-    function editHendler(index){
-        console.log(index);
-        setUserInput(data[index])
-        setData([...data]);
+    function editHendler(id, t) {
+        setTask(t)
+        setEditId(id)
     }
 
-    function updateHendler(index){
-        data.splice(index, 1 , (userInput))
-        setData([...data]);
-    }
 
+    function updateHandler() {
+        if (task !== "") {
+            let one = items.map((item) =>
+                (item.id === editId) ? ({ ...item, task: task }) : (item)
+            )
+            setItems(one)
+            setTask("")
+            setEditId(null)
+        } else {
+            alert("Enter value")
+        }
+    }
 
     return (
         <>
-            <div className=' bg-success bg-opacity-25 w-50 m-auto p-2'>
+            <div className=' bg-info bg-opacity-25 w-50 m-auto p-2'>
+                <h1 className='text-center pt-3'>To Do List</h1>
                 <div className='d-flex justify-content-center p-5'>
-                    <input type="text" className='py-3 px-5 me-2 fs-2' value={userInput} onChange={addHendler} />
-                    <button type='submit' className="btn btn-success px-3" onClick={rendering}>Add</button>
-                    <button type='submit' className="btn btn-success px-3" onClick={updateHendler}>Update</button>
+                    <input type="text" className='py-2 px-3 me-2 fs-2 w-75' value={task} onChange={e => setTask(e.target.value)} />
+                    <button type='submit' className="btn btn-info px-4" onClick={(editId == null) ? (addHandler) : (updateHandler)}>
+                        {(editId == null) ? "Add" : "Update"}
+                    </button>
                 </div>
+
                 <div>
                     <ul>
                         {finalData}

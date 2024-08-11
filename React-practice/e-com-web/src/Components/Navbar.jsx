@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Mode from './Mode'
 
-function Navbar() {
+function Navbar(props) {
     // let [mode, setMode] = useState("dark")
 
     // function darkHendler() {
@@ -13,7 +13,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="navbar align-items-start py-5 d-none d-xl-flex bg-body-tertiary position-fixed h-100" style={{ width: "250px" }} data-bs-theme={mode}>
+            <nav className="navbar align-items-start py-5 d-none d-xl-flex bg-body-tertiary position-fixed h-100" style={{ width: "250px" }} data-bs-theme="">
                 <div className="container h-100">
                     <div className="d-flex flex-column justify-content-between overflow-y-auto h-100 text-center w-100 gap-5" >
                         <div className='d-flex flex-column gap-5'>
@@ -38,7 +38,7 @@ function Navbar() {
                             <span>
                                 {/* <button type="button" className="btn btn-dark me-2" onClick={darkHendler}>Dark</button>
                                 <button type="button" className="btn btn-light border border-2" onClick={lightHendler}>Light</button> */}
-                                <Mode />
+                                <Mode/>
                             </span>
                         </div>
                     </div>
