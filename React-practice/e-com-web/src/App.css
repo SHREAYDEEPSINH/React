@@ -1,0 +1,4 @@
+body [data-bs-theme="dark"]{
+    background-color: rgb(4, 30, 43) !important;
+    color: #ffffff;
+}

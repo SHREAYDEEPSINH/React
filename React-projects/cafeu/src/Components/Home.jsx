@@ -41,7 +41,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                <div className="card bg-transparent border-0 w-100" >
+                                    <div className="card bg-transparent border-0 w-100" >
                                         <div className="row g-0 align-items-center">
                                             <div className="col-md-6">
                                                 <div className="card-body p-0 d-flex flex-column text-center text-md-start gap-4 homefistcard">
@@ -62,7 +62,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                <div className="card bg-transparent border-0 w-100" >
+                                    <div className="card bg-transparent border-0 w-100" >
                                         <div className="row g-0 align-items-center">
                                             <div className="col-md-6">
                                                 <div className="card-body p-0 d-flex flex-column text-center text-md-start gap-4 homefistcard">
