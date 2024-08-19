@@ -2,8 +2,6 @@ import React from 'react'
 
 function Navbar(props) {
 
-
-
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">

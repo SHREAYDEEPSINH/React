@@ -16,7 +16,7 @@ function Product() {
                 console.log("Data Error")
             }
         }
-        cardData()
+        cardData()    
 
     }, []);
 

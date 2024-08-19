@@ -3,7 +3,6 @@ import React from 'react'
 function Footer() {
     return (
         <>
-
             <div class="card rounded-0" data-bs-theme="dark">
                 <div class="card-body py-5">
                     <div class="container card-group">
@@ -54,9 +53,6 @@ function Footer() {
                     <h6 className='m-0'> © Copyright 2024. ShopNow PVT LTD. All Rights Reserved.</h6>
                 </div>
             </div>
-
-
-
         </>
     )
 }

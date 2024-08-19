@@ -8,8 +8,12 @@ function Todolist() {
     let [editId, setEditId] = useState(null);
 
     function addHandler() {
-        setItems([...items, { id: nextId++, task: task }])
-        setTask("")
+        if (task !== "") {
+            setItems([...items, { id: nextId++, task: task }])
+            setTask("")
+        } else {
+            alert("Enter value")
+        }
     }
 
     let finalData = items.map((item) =>
@@ -22,55 +26,39 @@ function Todolist() {
         </li>
     )
 
+    // Delete task 
     function deleteHendler(id) {
         setItems(items.filter((e) => e.id !== id))
         console.log("deleted");
 
     }
 
+    // Edit task 
     function editHendler(id, t) {
-
-        // let one = items.find((e) => e.id === id)
-        // editId = one.id
-        // setItems(one)
-        // console.log(one.task)
-
-        // if(one){
-
-        //     console.log(task ,"task")
-        // }
-        // if (one) {
-        //     setItems(task)
-        // }
-        // setItems()
-
         setTask(t)
         setEditId(id)
     }
 
-
-    function updateHandler(e) {
-
-        // let one = items.find((e) => e.id === index)
-        // one.task = task
-        // console.log(one);
-
-        let one=items.map((item) =>
-            (item.id === editId) ? ({ ...item, task: task }) : (item)
-        )
-
-        setItems(one)
-        setTask("")
-        setEditId(null)
+    // Update task
+    function updateHandler() {
+        if (task !== "") {
+            let one = items.map((item) =>
+                (item.id === editId) ? ({ ...item, task: task }) : (item)
+            )
+            setItems(one)
+            setTask("")
+            setEditId(null)
+        } else {
+            alert("Enter value")
+        }
     }
-
-
 
     return (
         <>
-            <div className=' bg-info bg-opacity-25 w-50 m-auto p-2'>
-                <div className='d-flex justify-content-center p-5'>
-                    <input type="text" className='py-2 px-3 me-2 fs-2 w-75 ' value={task} onChange={e => setTask(e.target.value)} />
+            <div className='border border-2 border-info w-100 m-auto p-2 rounded-3'>
+            <h2 className='text-center py-2 text-info'>Todolist Without LocalStorage</h2>
+                <div className='d-flex justify-content-center p-4'>
+                    <input type="text" className='py-2 px-3 me-2 fs-2 w-75 bg-transparent text-white border-info' value={task} onChange={e => setTask(e.target.value)} />
                     <button type='submit' className="btn btn-info px-3" onClick={(editId == null) ? (addHandler) : (updateHandler)}>
                         {(editId == null) ? "Add" : "Update"}
                     </button>
