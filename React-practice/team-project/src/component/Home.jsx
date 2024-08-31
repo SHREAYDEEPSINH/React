@@ -6,13 +6,13 @@ function Home() {
             <section>
                 <div id="carouselExample" className="carousel slide">
                     <div className="carousel-inner">
-                        <div className="carousel-item active">
+                        <div className="carousel-item ">
                             <img src="https://www.emavens.com/wp-content/uploads/2012/01/web-design-development-1.jpg" className="d-block w-100 object-fit-cover" height={650} alt="..." />
                         </div>
                         <div className="carousel-item">
                             <img src="https://media.licdn.com/dms/image/D5612AQGMoXcDQC9cDQ/article-cover_image-shrink_720_1280/0/1668510249345?e=2147483647&v=beta&t=bZ2_m3p_qq3lQOGPhAi6UPB2hbjwkPBdtqmi91oyqIM" className="d-block w-100 object-fit-cover" height={650} alt="..." />
                         </div>
-                        <div className="carousel-item">
+                        <div className="carousel-item active">
                             <img src="https://cube-interactive.com/libe-storage/2022/08/WebsiteMock-Up01copy.jpg" className="d-block w-100 object-fit-cover" height={650} alt="..." />
                         </div>
                     </div>
@@ -29,7 +29,7 @@ function Home() {
 
 
             {/* project section  */}
-            <section className='bg-success-subtle'>
+            <section className=''>
                 <div className='container'>
                     <h2 className='text-center py-4 fs-1'>Projects</h2>
                     <div className="row row-cols-1 row-cols-md-3 g-4 pb-5">
