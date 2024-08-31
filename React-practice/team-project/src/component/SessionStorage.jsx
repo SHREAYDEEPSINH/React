@@ -87,6 +87,7 @@ function SessionStorage() {
                                     placeholder="Enter a task"
                                     value={task}
                                     onChange={(e) => setTask(e.target.value)}
+                                    
                                 
                                 />
                                 <button
@@ -101,7 +102,7 @@ function SessionStorage() {
 
                     <div className="row g-3">
                         <div className="col-6 border border-2 p-3">
-                            <h2 className="text-center">Add tasks</h2>
+                            <h2 className="text-center">Add task</h2>
                             {items.map((item) => (
                                 <div
                                     key={item.id}
@@ -113,23 +114,20 @@ function SessionStorage() {
 
                                         <button
                                             type="button"
-                                            className="btn btn-dark d-flex justify-content-center align-items-center w-25" style={{ height: "20px" }}
+                                            className="btn btn-dark d-flex justify-content-center align-items-center bg-danger" 
                                             data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"
+                                        
                                             onClick={() => handleModalOpen(item)}
                                         >
-                                            <div className="form-check d-flex justify-content-center">
-                                                <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
-                                                <label className="form-check-label" htmlFor="flexCheckIndeterminate">
-                                                </label>
-                                            </div>
+                                            Save
                                         </button>
                                     </div>
                                 </div>
                             ))}
                         </div>
                         <div className="col-6 border border-2 p-3">
-                            <h3 className="text-center ">Save tesks</h3>
+                            <h3 className="text-center ">Save task</h3>
                             {save.map((i) => (
                                 <div
                                     key={i.id}
@@ -184,7 +182,7 @@ function SessionStorage() {
                                 <button
                                     type="button"
                                     data-bs-dismiss="modal"
-                                    className="btn btn-primary"
+                                    className="btn btn-danger"
                                     onClick={() => handleSaveTask(selectedItem?.id)}
                                 >
                                     Save changes
