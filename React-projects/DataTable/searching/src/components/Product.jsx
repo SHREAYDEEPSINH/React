@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar';
 function Product() {
 
     let [userData, setUserData] = useState([])
     let [filterData, setFilterData] = useState(null)
+    let [searchData, setSearchData] = useState([])
 
     useEffect(() => {
 
@@ -16,11 +16,17 @@ function Product() {
                 console.log("Data Error")
             }
         }
-        cardData()    
+        cardData()
     }, []);
 
 
-    let carddata = userData.map((products) => (
+
+    let filterdata = userData.filter(({ category }) => {
+        return (filterData) ? (category == filterData) : (userData)
+
+    }).filter(({ title }) => {
+        return title.indexOf(searchData) >= 0;
+    }).map((products) => (
         <li key={products.id} category={products.category}>
 
             <div className="card border border-2 border-secondary" style={{ width: "260px", height: "500px" }}>
@@ -36,31 +42,28 @@ function Product() {
     ))
 
 
-
-    function all(){
-        setFilterData(carddata)
-    }
-    function men() {
-        setFilterData(carddata.filter((products) => products.props.category == "men's clothing"))
-    }
-    function women() {
-        setFilterData(carddata.filter((products) => products.props.category == "women's clothing"))
-    }
-    function jewelery() {
-        setFilterData(carddata.filter((products) => products.props.category == "jewelery"))
-    }
-    function electronics() {
-        setFilterData(carddata.filter((products) => products.props.category == "electronics"))
-    }
-
-
     return (
         <div className='bg-secondary-subtle'>
-            <Navbar all={all} men={men} women={women} jewelery={jewelery} electronics={electronics} />
-
             <div>
+                <div className='container d-flex justify-content-between align-items-center'>
+
+                    <form className="d-flex mt-3 w-50" >
+                        <input className="p-1 w-50 rounded-2" type="search" placeholder="Search" aria-label="Search" value={searchData} onChange={(e) => setSearchData(e.target.value)} />
+                    </form>
+                    <div className='mt-3'>
+                        <select className="form-select border border-2 border-black" aria-label="Category select" value={filterData} onChange={(e) => setFilterData(e.target.value)}>
+                            <option value="">All Categories</option>
+                            <option value="men's clothing">Men's Clothing</option>
+                            <option value="women's clothing">Women's Clothing</option>
+                            <option value="jewelery">Jewelry</option>
+                            <option value="electronics">Electronics</option>
+                        </select>
+                    </div>
+
+
+                </div>
                 <ul className='list-unstyled d-flex flex-wrap gap-2 justify-content-center py-4 m-0'>
-                    {(filterData == null)? (carddata): (filterData)}
+                    {filterdata}
                 </ul>
             </div>
         </div>
