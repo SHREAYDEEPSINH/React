@@ -22,12 +22,12 @@ function Home() {
         .filter(({ category }) => {
             return filterData ? category == filterData : userData;
         })
-        .sort((a, b) => {
-            return sortData == "Low to high" ? a.price - b.price : userData;
-        })
-        .sort((a, b) => {
-            return sortData == "high to low" ? b.price - a.price : userData;
-        })
+        // .sort((a, b) => {
+        //     return sortData == "Low to high" ? a.price - b.price : userData;
+        // })
+        // .sort((a, b) => {
+        //     return sortData == "high to low" ? b.price - a.price : userData;
+        // })
         .filter(({ title }) => {
             return title.indexOf(searchData) >= 0;
         })

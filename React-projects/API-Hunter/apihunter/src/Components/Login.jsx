@@ -20,11 +20,11 @@ function Login() {
 
     function loginSubmitHandler(e) {
         e.preventDefault()
-        
-        
+
+
         let logInUser = data.find((ele) => ele.email === user.email);
         console.log(logInUser.name);
-        
+
 
         if (user.email !== "" && user.password !== "") {
 
@@ -32,7 +32,7 @@ function Login() {
                 if (logInUser.password == user.password) {
                     localStorage.setItem("lsItems", JSON.stringify(logInUser))
                     navigate("/home")
-                    
+
                 } else {
                     alert("password Wrong");
                     setUser({ email: "", password: "" })
