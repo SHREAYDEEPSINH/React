@@ -47,14 +47,14 @@ function Singup() {
     return (
         <div className="d-flex justify-content-center align-items-center bg-black" style={{ height: "100vh" }} >
 
-            <div className="border border-1 border-danger rounded-2 w-25 m-auto my-5 p-5">
+            <div className="border border-1 border-success rounded-2 w-25 m-auto my-5 p-5">
                 <form onSubmit={loginSubmitHandler} className="text-white">
                     <h2>SingUp</h2>
                     <div className="mb-3">
                         <label className="form-label">name</label>
                         <input
                             type="text"
-                            className="form-control border border-3 border-danger"
+                            className="form-control border border-3 border-success"
                             aria-describedby="emailHelp"
                             onChange={(e) => setUser({ ...user, name: e.target.value })}
                         />
@@ -63,7 +63,7 @@ function Singup() {
                         <label className="form-label">Email</label>
                         <input
                             type="email"
-                            className="form-control border border-3 border-danger"
+                            className="form-control border border-3 border-success"
                             aria-describedby="emailHelp"
                             onChange={(e) => setUser({ ...user, email: e.target.value })}
                         />
@@ -72,11 +72,11 @@ function Singup() {
                         <label className="form-label">Password</label>
                         <input
                             type="password"
-                            className="form-control border border-3 border-danger"
+                            className="form-control border border-3 border-success"
                             onChange={(e) => setUser({ ...user, password: e.target.value })}
                         />
                     </div>
-                    <button type="submit" className="btn btn-danger">
+                    <button type="submit" className="btn btn-success">
                         Singup
                     </button>
                     <div className="mt-2 ">

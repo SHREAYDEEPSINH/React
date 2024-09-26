@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
-    
+
+    let user = (JSON.parse(localStorage.getItem("lsItems")) || [])
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -17,6 +19,9 @@ function Navbar() {
                             </ul>
                         </div>
                         <div className='d-flex gap-4'>
+                            <ul className="navbar-nav mb-2 mb-lg-0">
+                                <h4 className='text-white'>Welcome {user.name}</h4>
+                            </ul>
                             <ul className="navbar-nav mb-2 mb-lg-0">
                                 <Link to="/" className='text-white text-decoration-none'>Login</Link>
                             </ul>

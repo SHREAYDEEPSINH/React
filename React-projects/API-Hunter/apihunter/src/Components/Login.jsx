@@ -16,19 +16,23 @@ function Login() {
             })
             .catch((err) => console.log(err));
     }, []);
-    // console.log(user);
 
 
     function loginSubmitHandler(e) {
         e.preventDefault()
-
-        let one = data.find((ele) => ele.email === user.email);
+        
+        
+        let logInUser = data.find((ele) => ele.email === user.email);
+        console.log(logInUser.name);
+        
 
         if (user.email !== "" && user.password !== "") {
 
-            if (one) {
-                if (one.password == user.password) {
+            if (logInUser) {
+                if (logInUser.password == user.password) {
+                    localStorage.setItem("lsItems", JSON.stringify(logInUser))
                     navigate("/home")
+                    
                 } else {
                     alert("password Wrong");
                     setUser({ email: "", password: "" })
