@@ -30,7 +30,6 @@ function Todolist() {
     function deleteHendler(id) {
         setItems(items.filter((e) => e.id !== id))
         console.log("deleted");
-
     }
 
     // Edit task 
@@ -43,6 +42,7 @@ function Todolist() {
     function updateHandler() {
         if (task !== "") {
             let one = items.map((item) =>
+                console.log(item)
                 (item.id === editId) ? ({ ...item, task: task }) : (item)
             )
             setItems(one)

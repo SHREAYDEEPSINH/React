@@ -35,8 +35,6 @@ function Product() {
         </li>
     ))
 
-
-
     function all(){
         setFilterData(carddata)
     }

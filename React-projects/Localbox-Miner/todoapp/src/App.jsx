@@ -13,7 +13,6 @@ function App() {
       <div className="col-6">
         <TodoLocalstorage />
       </div>
-
     </div>
   )
 }

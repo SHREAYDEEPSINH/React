@@ -65,14 +65,7 @@ function Users() {
         }
         fetchData()
     }, [])
-    
-    // console.log(user)
 
-    // let rendar = user.map((ele) => (
-    //     <li key={ele.id}>
-    //         {ele.name}
-    //     </li>
-    // ))
 
     let finalData = user.filter(({ name }) => {
         return name.indexOf(data) >= 0;

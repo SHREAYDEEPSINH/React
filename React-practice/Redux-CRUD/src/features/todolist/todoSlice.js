@@ -1,37 +1,40 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
-  index : "",
+  value: [
+    {
+      id: 0,
+      task: "hello"
+    }
+  ],
 }
 
 export const todoSlice = createSlice({
   name: 'todolist',
   initialState,
   reducers: {
-    edit : (state) => {
-        state.value += 1
-        console.log("hii")
+    add: (state, action) => {
+      state.value.push({
+        id: action.payload.id,
+        task: action.payload.task
+      })
     },
-    deleteHandler : (state,id) => {
-      // state.value += 1;
-      console.log(state)
-      // (state.filter((e) => e.id !== id))
-        console.log("delete");
+
+    deleteHandler: (state, action) => {
+
+      state.value = (state.value.filter((ele) => {
+        return ele.id !== action.payload
+      }))
+    },
+
+    editHandler : (state ,action) => {
+        console.log("hii")
+        
     }
-    // increment: (state) => {
-    //   state.value += 1
-    // },
-    // decrement: (state) => {
-    //   state.value -= 1
-    // },
-    // incrementByAmount: (state, action) => {
-    //   state.value += action.payload
-    // },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { edit , deleteHandler } = todoSlice.actions
+export const { add, editHandler, deleteHandler } = todoSlice.actions
 
 export default todoSlice.reducer

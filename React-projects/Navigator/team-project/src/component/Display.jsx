@@ -24,7 +24,6 @@ function Display() {
     function deleteHendler(id) {
         setItems(items.filter((e) => e.id !== id))
         console.log("deleted");
-
     }
 
     // Edit task 

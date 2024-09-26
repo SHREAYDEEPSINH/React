@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ProductData } from './Data'
 import Productprops from './Productprops'
 function Product() {
-    const carddata = ProductData.map((products) => (
+    let [search,setSearch] =useState("")
+
+    const carddata = ProductData.filter(({title})=>{
+        return title.indexOf(search) >= 0;
+    }).map((products) => (
         <li key={products.id} category={products.category}>
 
             <div className="card border border-2 border-success" style={{ width: "260px", height: "500px" }}>
@@ -26,6 +30,7 @@ function Product() {
 
     return (
         <div>
+            <input type="text" value={search} onChange={(e)=> setSearch(e.target.value)}/>
             <Productprops name="All Products" call={carddata} />
             <Productprops name="Mens Category" call={mensProduct} />
             <Productprops name="Womens Category" call={womensProduct} />
