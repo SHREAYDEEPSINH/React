@@ -25,7 +25,7 @@ function App() {
     },
     {
       path: "/update/:id",
-      element: <><Navbar/><Updatepassword/></>,
+      element: <><Updatepassword/></>,
     }
   ]);
 

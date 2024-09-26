@@ -48,7 +48,7 @@ function Updatepassword() {
 
     return (
         <div className="d-flex justify-content-center align-items-center bg-black" style={{ height: "100vh" }} >
-            <div className='w-25 m-auto my-5 border border-2 p-4 text-white'>
+            <div className='w-25 m-auto my-5 border border-2 rounded-2 border-danger p-4 text-white'>
                 <h2>Change Password</h2>
                 <form onSubmit={submitHandler}>
                     <div className="mb-3">
@@ -69,7 +69,7 @@ function Updatepassword() {
                             onChange={(e) => setUser({ ...user, password: e.target.value })}
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-danger">
                         Submit
                     </button>
                     <div className="mt-2 ">
