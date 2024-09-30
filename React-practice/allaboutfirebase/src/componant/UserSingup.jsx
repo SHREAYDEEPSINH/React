@@ -17,6 +17,7 @@ function UserSingup() {
   return (
     <>
       <div className="container bg-dark text-white p-5">
+        <h2>singup</h2>
         <div className="col">
           <label htmlFor="">User Email</label>
           <br />
