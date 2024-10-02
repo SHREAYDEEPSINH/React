@@ -1,23 +1,23 @@
-import React from 'react'
-import { getDatabase, ref, set } from 'firebase/database'
-import { app } from '../firebase'
+// import React from 'react'
+// import { getDatabase, ref, set } from 'firebase/database'
+// import { app } from '../firebase'
 
-function Hello() {
+// function Hello() {
 
-    const database = getDatabase(app)
+//     const database = getDatabase(app)
 
-    function click(){
-        set(ref(database, 'users/shreay'), {
-          name: "shreay",
-          email: "email",
-        });
-    }
+//     function click(){
+//         set(ref(database, 'users/shreay'), {
+//           name: "shreay",
+//           email: "email",
+//         });
+//     }
 
-    return (
-        <>
-            <button onClick={click}>add</button>
-        </>
-    )
-}
+//     return (
+//         <>
+//             <button onClick={click}>add</button>
+//         </>
+//     )
+// }
 
-export default Hello
+// export default Hello

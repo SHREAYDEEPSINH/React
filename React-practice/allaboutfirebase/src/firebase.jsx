@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBPgRavodcN7AwOMCqz7daZRmG1jyomDH4",
-    authDomain: "mybook-app-712dc.firebaseapp.com",
-    projectId: "mybook-app-712dc",
-    storageBucket: "mybook-app-712dc.appspot.com",
-    messagingSenderId: "1074981249711",
-    appId: "1:1074981249711:web:da9a74d19f5e899b4b2a5a",
-    databaseURL: "https://mybook-app-712dc-default-rtdb.firebaseio.com"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    databaseURL: import.meta.env.VITE_DATABASE_URL,
 };
 
 export const app = initializeApp(firebaseConfig);

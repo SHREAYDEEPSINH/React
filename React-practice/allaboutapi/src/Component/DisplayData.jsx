@@ -14,7 +14,7 @@ function DisplayData() {
         setData(Object.keys(res.data[0]))
         setRecord(res.data)
       })
-      .catch((err) => console.log("Bad request"));
+      .catch((err) => console.log("Bad request"))
   }, []);
 
   function deletHandler(id) {
@@ -40,7 +40,6 @@ function DisplayData() {
             <tr>
               {data.map((ele, ind) => (
                 <th key={ind}>{ele}</th>
-
               ))}
               <th>Action</th>
             </tr>

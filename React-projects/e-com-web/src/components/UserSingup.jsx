@@ -2,21 +2,25 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { app } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const auth = getAuth(app);
 
 function UserSingup() {
-  let [data, setData] = useState({ firstname: "", lastname: "", email: "", password: "" });
+  let [data, setData] = useState({ email: "", password: "" });
   const navigate = useNavigate()
+
+
+  const provider = new GoogleAuthProvider();
 
 
   const singupUser = () => {
     createUserWithEmailAndPassword(auth, data.email, data.password)
-    .then(() => {
-      alert("User Singup SuccessFfully")
-      navigate("/usersingin")
-    }
-    ).catch((err) => console.log(err))
+      .then(() => {
+        alert("User Singup SuccessFfully")
+        navigate("/usersingin")
+      }
+      ).catch((err) => console.log(err))
   };
 
   return (
@@ -25,7 +29,7 @@ function UserSingup() {
         <div className="card bg-secondary text-white p-4 shadow-lg" style={{ width: '400px' }}>
           <h2 className="text-center mb-4">Create an Account</h2>
           <form onSubmit={(e) => e.preventDefault()}>
-            <div className="mb-3">
+            {/* <div className="mb-3">
               <label htmlFor="firstname" className="form-label">First Name</label>
               <input
                 type="text"
@@ -48,7 +52,7 @@ function UserSingup() {
                 value={data.lastname}
                 onChange={(e) => setData({ ...data, lastname: e.target.value })}
               />
-            </div>
+            </div> */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">User Email</label>
               <input

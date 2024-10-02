@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getDatabase, push, ref, set } from 'firebase/database'
+import { getDatabase, ref, set } from 'firebase/database'
 import { app } from '../firebase'
 
 
@@ -13,23 +13,14 @@ function RealtimeData() {
     const db = getDatabase(app)
 
     const singupUser = () => {
-        const postListRef = ref(db, "post");
-        const newPostRef = push(postListRef);
-        set(newPostRef ,
+        set(ref(db, `user/${data.name}`), (
             {
-                name : data.name,
+                name: data.name,
                 email: data.email,
                 password: data.password
             }
-        ).then(() => console.log("data Added succesfullly"))
+        )).then(() => console.log("data Added succesfullly"))
     }
-
-
-    // const db = getDatabase();
-    
-    // set(newPostRef, {
-    //     // ...
-    // });
 
     return (
         <>

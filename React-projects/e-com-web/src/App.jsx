@@ -1,20 +1,21 @@
 import React from 'react'
-import './App.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Navbar from './components/Navbar';
 import UserSingup from './components/UserSingup';
-import Hello from './components/Hello';
 import UserSingIn from './components/UserSingIn';
+import Home from './components/Home';
+import './App.css'
+import InkWork from './components/InkWork';
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <><Navbar/></>,
+      element: <><Navbar/><Home/><InkWork/></>,
     },
     {
       path: "/usersingin",
