@@ -5,28 +5,28 @@ import {
 } from "react-router-dom";
 import Navbar from './componant/Navbar';
 import DisplayData from './componant/DisplayData';
-import Home from './componant/Home';
 import RealtimeData from './componant/RealtimeData';
+import EditData from './componant/EditData';
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <><Navbar/></>,
-    },
-    {
-      path: "/home",
-      element: <><Navbar/><Home/></>,
+      element: <><Navbar /><RealtimeData/></>,
     },
     {
       path: "/display",
-      element: <><Navbar/><DisplayData/></>,
+      element: <><Navbar /><DisplayData /></>,
     },
     {
       path: "/realtimedata",
-      element: <><Navbar/><RealtimeData/></>,
+      element: <><Navbar /><RealtimeData /></>,
     },
+    {
+      path: "/edit/:id",
+      element: <><Navbar /><EditData/></>,
+    }
   ]);
   return (
     <>

@@ -12,29 +12,28 @@ function RealtimeData() {
 
     const db = getDatabase(app)
 
+
     const singupUser = () => {
-        const postListRef = ref(db, "post");
-        const newPostRef = push(postListRef);
-        set(newPostRef ,
-            {
-                name : data.name,
-                email: data.email,
-                password: data.password
-            }
-        ).then(() => console.log("data Added succesfullly"))
+        if (data.name != "" && data.email != "" && data.password != "") {
+            const postListRef = ref(db, "post");
+            const newPostRef = push(postListRef);
+            set(newPostRef,
+                {
+                    name: data.name,
+                    email: data.email,
+                    password: data.password
+                }
+            ).then(() => alert("data Added succesfullly")).catch((err)=> alert(err))
+        } else {
+            alert("Fill Empty Details")
+        }
     }
-
-
-    // const db = getDatabase();
-    
-    // set(newPostRef, {
-    //     // ...
-    // });
 
     return (
         <>
-            <div className="container bg-dark text-white p-5 w-50">
+            <div className="container bg-dark text-white p-5 w-50 my-5" >
                 <div className="col">
+                    <h1>SendData To DataBase</h1>
                     <label htmlFor="">User Name</label>
                     <br />
                     <input
