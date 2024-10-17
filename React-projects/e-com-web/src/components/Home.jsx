@@ -19,7 +19,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <img width={"100%"} src="https://cdn11.bigcommerce.com/s-x49po/images/stencil/1500x1500/products/7210/16173/37x24-02__37180.1506574139.JPG?c=2" className="img-fluid rounded-start" alt="..." />
+                                    <img width={"100%"} src="https://cdn11.bigcommerce.com/s-x49po/images/stencil/1500x1500/products/7210/16173/37x24-02__37180.1506574139.JPG?c=2" className="img-fluid rounded-start" alt=".." />
                                 </div>
                             </div>
                         </div>
