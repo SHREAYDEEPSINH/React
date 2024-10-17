@@ -20,7 +20,7 @@ function UserSingup() {
         alert("User Singup SuccessFfully")
         navigate("/usersingin")
       }
-      ).catch((err) => console.log(err))
+      ).catch((err) => alert(err))
   };
 
   return (
@@ -29,30 +29,6 @@ function UserSingup() {
         <div className="card bg-secondary text-white p-4 shadow-lg" style={{ width: '400px' }}>
           <h2 className="text-center mb-4">Create an Account</h2>
           <form onSubmit={(e) => e.preventDefault()}>
-            {/* <div className="mb-3">
-              <label htmlFor="firstname" className="form-label">First Name</label>
-              <input
-                type="text"
-                className="form-control fsname"
-                id="firstname"
-                required
-                placeholder="Enter First Name"
-                value={data.firstname}
-                onChange={(e) => setData({ ...data, firstname: e.target.value })}
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="lastname" className="form-label">Last Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="lastname"
-                required
-                placeholder="Enter Last Name"
-                value={data.lastname}
-                onChange={(e) => setData({ ...data, lastname: e.target.value })}
-              />
-            </div> */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">User Email</label>
               <input

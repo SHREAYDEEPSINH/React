@@ -1,30 +1,44 @@
-/* body [data-bs-theme="dark"]{
-    background-color: rgb(0, 0, 0) !important;
-    color: #ffffff;
-} */
 
-
-/* .home-section {
-    background: #f8f9fa;
-    padding: 100px 0;
-} */
-/* .home-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-} */
  body{
-    background-image: url(https://img.freepik.com/free-photo/pastel-pink-oil-paint-textured-background_53876-108408.jpg);
-    /* background-image: url(https://static.vecteezy.com/system/resources/thumbnails/002/677/487/small_2x/abstract-pink-pastel-paper-background-texture-pastel-color-watercolor-marbled-painting-chalkboard-concrete-art-rough-stylized-texture-background-for-aesthetic-creative-design-free-photo.jpg); */
-    /* background-image: url(https://img.freepik.com/premium-vector/soft-pink-watercolor-background_266878-73.jpg); */
-    /* background-image: url(https://img.freepik.com/free-vector/modern-soft-pink-watercolor-texture-design-background_1055-21611.jpg); */
-    background-image: url(https://img.freepik.com/free-photo/green-paint-brush-textured-background_53876-104801.jpg);
-    background-image: url(https://i.pinimg.com/originals/94/7e/3e/947e3e1cbc0c458c148284d8b0be6b49.jpg);
-    /* background-repeat: no-repeat; */
-    background-size: 34%;
- }
-.home-section p {
-    font-size: 80px ;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 30px;
-} 
+    background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148925205.jpg);
+     background-size: 100%;
+
+}
+
+
+/* home section  */
+.nav-home-back-img{
+    background-image: url(https://cafeu-react.netlify.app/img/slider/banner-bg.jpg);
+    background-size: cover;
+  }
+  .homemain{
+    height: auto;
+  }
+  .homefistcard>h5{
+    color:  #c33;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .homefistcard>h1{
+    font-size: 50px;
+  }
+  .homefistcard>span>button{
+    width: 120px;
+    height: 45px;
+    background-color: #cc3333;
+  }
+  .homefistcard>span :nth-child(2){
+    width: 45px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .homefistcard>h1{
+      font-size: 46px;
+    }
+  }
+  @media screen and (max-width: 776px) {
+    .homefistcard>h1{
+      font-size: 36px;
+    }
+  }
+  

@@ -7,40 +7,29 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light px-4 border-bottom border-danger">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"><h2>Painter</h2></a>
+          <Link to="/" className="navbar-brand text-danger" href="#"><h2>Painter</h2></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-4 gap-4">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <Link to="/" className="nav-link active" aria-current="page" href="#">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <Link to="/inkwork" className="nav-link active" aria-current="page" href="#">Ink Work</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <Link to="/abstractart" className="nav-link active" aria-current="page" href="#">Abstract Art</Link>
               </li>
             </ul>
-            {/* <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
-            </form> */}
-
           </div>
           <div className='d-flex gap-3'>
-            <Link to="/usersingin"><FaUser className='fs-4 ' /></Link>
-            <RiShoppingCart2Fill className='fs-4 ' />
-            <FaHeart className='fs-4' />
+            <Link to="/usersingin" className='text-danger'><FaUser className='fs-4 ' /></Link>
+            <Link to="/AddToCart" className='text-danger'><RiShoppingCart2Fill className='fs-4 ' /></Link>
+            {/* <Link to="/wishlist"> <FaHeart className='fs-4 text-danger' /></Link> */}
           </div>
         </div>
       </nav>

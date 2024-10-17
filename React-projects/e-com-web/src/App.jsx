@@ -9,13 +9,16 @@ import UserSingIn from './components/UserSingIn';
 import Home from './components/Home';
 import './App.css'
 import InkWork from './components/InkWork';
+import AbstractArt from './components/AbstractArt';
+import AddToCart from './components/AddToCart';
+import Footer from './components/Footer';
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <><Navbar/><Home/><InkWork/></>,
+      element: <><Navbar/><Home/><AbstractArt/><InkWork/><Footer/></>,
     },
     {
       path: "/usersingin",
@@ -25,6 +28,18 @@ function App() {
       path: "/usersingup",
       element: <><UserSingup/></>,
     },
+    {
+      path: "/inkwork",
+      element: <><Navbar/><InkWork/></>,
+    },
+    {
+      path: "/abstractart",
+      element: <><Navbar/><AbstractArt/></>,
+    },
+    {
+      path: "/AddToCart",
+      element: <><Navbar/><AddToCart/></>,
+    }
   ]);
 
   return (

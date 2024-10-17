@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 function DisplayData() {
 
-    let [userData, setUserData] = useState([]);
+    let [userData, setUserData] = useState([])
     let [key, setKey] = useState([])
 
-    const db = getDatabase(app);
+    const db = getDatabase(app)
 
     useEffect(() => {
 
@@ -32,9 +32,9 @@ function DisplayData() {
         remove(deleteItem)
     }
 
+
     return (
         <>
-
             <table className="table table-dark text-center w-75 m-auto my-4">
                 <thead>
                     <tr>
