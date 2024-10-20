@@ -19,16 +19,29 @@ function AbstractArt() {
 
 
     const handleAddToCart = (item) => {
-        const updatedCart = [...cartData, item];
-        dispatch(addToCart(item));
-        
+        let findIndex = cartData.findIndex((ele) => ele.id == item.id);
+        let updatedCart
+        if (findIndex >= 0) {
+            updatedCart = cartData.map((ele, index) => {
+                if (index == findIndex) {
+                    return { ...ele, quantity: ele.quantity + 1 };
+                }
+                return ele
+            })
+        } else {
+            // Add new item with quantity 1
+            updatedCart = [...cartData, { ...item, quantity: 1 }];
+        }
+
+        dispatch(addToCart(updatedCart));
+
+
         const cartRef = ref(database, 'cart/');
         set(cartRef, { items: updatedCart })
-            .then(() => 
-              {
+            .then(() => {
                 alert("data added in cart");
                 console.log('Cart saved to Firebase')
-              }
+            }
             )
             .catch((error) => console.error('Erxror saving cart:', error));
     };

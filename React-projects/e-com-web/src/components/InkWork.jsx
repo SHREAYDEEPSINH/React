@@ -19,21 +19,33 @@ function InkWork() {
     let [sortData, setSortData] = useState("");
 
     const handleAddToCart = (item) => {
-        dispatch(addToCart(item))
+        let findIndex = cartData.findIndex((ele) => ele.id === item.id);
+        let updatedCart;
+
+        if (findIndex >= 0) {
+            // Item already exists in the cart; increase quantity
+            updatedCart = cartData.map((ele, index) => {
+                if (index === findIndex) {
+                    return { ...ele, quantity: ele.quantity + 1 };
+                }
+                return ele;
+            });
+        } else {
+            // Add new item with quantity 1
+            updatedCart = [...cartData, { ...item, quantity: 1 }];
+        }
+
+        dispatch(addToCart(updatedCart));
 
         // Set data in Firebase
-        const cartRef = ref(database, 'cart/' + item.id); // Adjust the path as necessary
-        set(cartRef, {
-            title: item.title,
-            price: item.price,
-            img: item.img,
-            // Add any other fields you want to store
-        })
+        const cartRef = ref(database, 'cart/');
+        set(cartRef, { items: updatedCart })
             .then(() => {
-                console.log('Data saved successfully!')
+                alert("Item added to cart!");
+                console.log('Cart saved to Firebase');
             })
             .catch((error) => {
-                console.error('Error saving data:', error)
+                console.error('Error saving cart:', error);
             });
     };
 

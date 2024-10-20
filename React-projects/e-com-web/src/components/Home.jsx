@@ -14,7 +14,7 @@ function Home() {
                                         <h1 className="fw-bold homeh1"><strong>Best online platform for painting</strong></h1>
                                         <p className="">Lorem ipsum dolor sit amet, conscetur adipiscing elit, sed do eimod <br /> tempor incididunt ut labore et dolore magna aliqua Quis</p>
                                         <span className='d-flex align-items-center justify-content-center justify-content-md-start'>
-                                            <button className=' rounded border-0 text-white me-5'>Order Now</button>
+                                            <button className=' rounded border-0 text-white'>Order Now</button>
                                         </span>
                                     </div>
                                 </div>

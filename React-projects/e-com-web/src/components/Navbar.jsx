@@ -9,7 +9,7 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-light px-4 border-bottom border-danger">
         <div className="container-fluid d-flex">
-          <Link to="/" className="navbar-brand text-danger" href="#"><h2>Painter</h2></Link>
+          <Link to="/" className="navbar-brand text-danger" href="#"><h2 className='m-0'>Painter</h2></Link>
           <div className='toggler-btn'>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>

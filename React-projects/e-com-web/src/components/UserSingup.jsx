@@ -53,7 +53,7 @@ function UserSingup() {
                 onChange={(e) => setData({ ...data, password: e.target.value })}
               />
             </div>
-            <button onClick={singupUser} className="btn btn-primary w-100">
+            <button onClick={singupUser} className="btn btn-success w-100">
               Sign Up
             </button>
             <div className="text-center mt-3">

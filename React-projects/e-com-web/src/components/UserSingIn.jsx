@@ -1,11 +1,10 @@
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import React, { useState } from 'react'
 import { app } from '../firebase'
 import { Link, useNavigate } from 'react-router-dom'
 
 
 const auth = getAuth(app)
-
 function UserSingIn() {
 
     const [email, setEmail] = useState("")
@@ -14,11 +13,13 @@ function UserSingIn() {
 
     const singInUser = () => {
         signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
-            alert("sing in Successfully!")
-            navigate("/")
-        }).catch((err)=> alert("Wrong Details"))
+            .then(() => {
+                alert("sing in Successfully!")
+                navigate("/")
+            }).catch((err) => alert("Wrong Details"))
     }
+
+   
 
     return (
         <div className="container d-flex justify-content-center align-items-center min-vh-100">
@@ -50,9 +51,10 @@ function UserSingIn() {
                     <div className="d-flex justify-content-between mb-3">
                         <Link to="/forgot-password" className="text-light">Forgot Password?</Link>
                     </div>
-                    <button onClick={singInUser} className="btn btn-primary w-100">
+                    <button onClick={singInUser} className="btn btn-success w-100">
                         Sign In
                     </button>
+
                     <div className="text-center mt-3">
                         <span>Don't have an account? </span>
                         <Link to="/usersingup" className="text-light fw-bold">Sign Up</Link>
