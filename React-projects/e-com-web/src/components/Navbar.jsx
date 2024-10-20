@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light px-4 border-bottom border-danger">
+      <nav className="navbar navbar-expand-lg navbar-light px-lg-4 border-bottom border-danger">
         <div className="container-fluid d-flex">
           <Link to="/" className="navbar-brand text-danger p-0" href="#"><h2 className='m-0 '>Painter</h2></Link>
           <div className='toggler-btn'>
