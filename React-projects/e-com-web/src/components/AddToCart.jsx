@@ -24,6 +24,7 @@ function AddToCart() {
     }, [dispatch]);
 
 
+
     const updateQuantity = (index, newQuantity) => {
         if (newQuantity < 1) return; // Prevent negative quantities
         const updatedCart = cartData.map((item, i) =>
@@ -38,6 +39,7 @@ function AddToCart() {
     };
 
 
+
     // Function to handle removing item from cart
     const deleteHandler = (index) => {
         const updatedCart = cartData.filter((ele, i) => i !== index); // Remove item by index
@@ -50,11 +52,13 @@ function AddToCart() {
     };
 
 
+
     let totalPrice = 0;
     cartData.forEach(item => {
         totalPrice += item.price * item.quantity;
     });
 
+    
 
     let finalData = cartData.map((ele, ind) => (
         <div key={ind} className="card bg-transparent border-0" style={{ width: "250px" }}>
@@ -77,6 +81,7 @@ function AddToCart() {
     ))
 
 
+
     return (
         <>
             <div className='container my-4 d-lg-flex justify-content-between'>
@@ -89,7 +94,7 @@ function AddToCart() {
                 {(finalData) ? (finalData) : (`Loding`)}
             </div>
 
-<hr />
+            <hr />
             {cartData.length > 0 && (
                     <div className='container'>
                         <h3 className=" text-danger d-lg-none d-flex justify-content-center">Total Cart: {totalPrice} Rs</h3>

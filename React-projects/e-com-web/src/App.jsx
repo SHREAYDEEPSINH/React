@@ -12,6 +12,7 @@ import InkWork from './components/InkWork';
 import AbstractArt from './components/AbstractArt';
 import AddToCart from './components/AddToCart';
 import Footer from './components/Footer';
+import Wishlist from './components/Wishlist';
 
 function App() {
 
@@ -39,6 +40,10 @@ function App() {
     {
       path: "/AddToCart",
       element: <><Navbar/><AddToCart/></>,
+    },
+    {
+      path: "/wishlist",
+      element: <><Navbar/><Wishlist/></>,
     }
   ]);
 

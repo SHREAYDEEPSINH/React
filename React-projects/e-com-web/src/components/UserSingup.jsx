@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { app } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
-import { GoogleAuthProvider } from "firebase/auth";
 
-const auth = getAuth(app);
 
 function UserSingup() {
+  const auth = getAuth(app);
   let [data, setData] = useState({ email: "", password: "" });
   const navigate = useNavigate()
 

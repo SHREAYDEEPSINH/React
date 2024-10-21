@@ -6,14 +6,17 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addToCart } from '../features/counter/cart'
 import { getDatabase, ref, set } from "firebase/database"
 import { app } from '../firebase'
+import { addToWishlist } from '../features/counter/wishlist'
 
 
 function InkWork() {
 
     const cartData = useSelector((state) => state.cart.items)
     const dispatch = useDispatch()
-    console.log(cartData);
-    
+
+    const wishlistData = useSelector((state) => state.wishlist.wishlistItems)
+
+
 
     const database = getDatabase(app)
     let [sortData, setSortData] = useState("");
@@ -49,6 +52,23 @@ function InkWork() {
             });
     };
 
+    let wishlistHandler = (item) => {
+        let findIndex = wishlistData.findIndex((ele) => ele.id == item.id);
+
+        dispatch(addToWishlist(item))
+
+        if (findIndex >= 0) {
+            alert("item alrady in wishlist")
+        } else {
+            const cartRef = ref(database, 'wishlist/');
+            set(cartRef, { items: [...wishlistData, item] })
+                .then(() => {
+                    alert("data added in Wishlist");
+                })
+                .catch((error) => console.error('Erxror saving cart:', error))
+        }
+    }
+
 
 
     let finalData = InkWorkData.sort((a, b) => {
@@ -64,7 +84,7 @@ function InkWork() {
                     <h5 className="card-text">{ele.price} Rs</h5>
                     <div>
                         <button href="#" className="btn border border-2 border-dark me-3 rounded-0" onClick={() => handleAddToCart(ele)}><RiShoppingCart2Fill className='fs-4 text-danger' /></button>
-                        {/* <button href="" className="btn border border-2 border-dark rounded-0"><FaHeart className='fs-4 text-danger' /></button> */}
+                        <button href="" className="btn border border-2 border-dark rounded-0" onClick={() => wishlistHandler(ele)} ><FaHeart className='fs-4 text-danger' /></button>
                     </div>
                 </div>
             </div>
