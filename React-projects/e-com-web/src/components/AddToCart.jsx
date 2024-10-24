@@ -6,7 +6,6 @@ import { removeFromCart, setCart } from '../features/counter/cart';
 
 function AddToCart() {
     const cartData = useSelector((state) => state.cart.items)
-    console.log(cartData, "cartData");
     const dispatch = useDispatch()
 
     const database = getDatabase(app);
@@ -58,7 +57,7 @@ function AddToCart() {
         totalPrice += item.price * item.quantity;
     });
 
-    
+
 
     let finalData = cartData.map((ele, ind) => (
         <div key={ind} className="card bg-transparent border-0" style={{ width: "250px" }}>
