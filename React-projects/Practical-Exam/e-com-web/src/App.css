@@ -1,0 +1,44 @@
+
+ body{
+    background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148925205.jpg);
+     background-size: 100%;
+
+}
+
+
+/* home section  */
+.nav-home-back-img{
+    background-image: url(https://cafeu-react.netlify.app/img/slider/banner-bg.jpg);
+    background-size: cover;
+  }
+  .homemain{
+    height: auto;
+  }
+  .homefistcard>h5{
+    color:  #c33;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .homefistcard>h1{
+    font-size: 50px;
+  }
+  .homefistcard>span>button{
+    width: 120px;
+    height: 45px;
+    background-color: #cc3333;
+  }
+  .homefistcard>span :nth-child(2){
+    width: 45px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .homefistcard>h1{
+      font-size: 46px;
+    }
+  }
+  @media screen and (max-width: 776px) {
+    .homefistcard>h1{
+      font-size: 36px;
+    }
+  }
+
