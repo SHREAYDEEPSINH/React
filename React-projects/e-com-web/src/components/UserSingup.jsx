@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { app } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
+import { GoogleAuthProvider } from "firebase/auth/web-extension";
 
 
 function UserSingup() {
