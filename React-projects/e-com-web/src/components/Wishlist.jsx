@@ -19,7 +19,8 @@ function Wishlist() {
             let data = snapshot.val();
 
             if (data) {
-                dispatch(setWishlist(data.items))
+                dispatch(setWishlist(data.items || []))
+                
             }
         })
 
@@ -28,13 +29,15 @@ function Wishlist() {
 
     const deleteHandler = (index) => {
         const updatedWishlist = wishlistData.filter((ele, i) => i !== index); // Remove item by index
-        dispatch(removeFromCart(index)); // Update Redux store
-
-        // dispatch(setWishlist(index))
+        
 
         const cartRef = ref(database, 'wishlist/');
         set(cartRef, { items: updatedWishlist})
-            .then(() => console.log('wishlist updated in Firebase'))
+            .then(() => {
+                console.log('wishlist updated in Firebase')
+                dispatch(removeFromCart(index)); // Update Redux store  
+                dispatch(setWishlist(updatedWishlist)); // re-render
+            })
             .catch((error) => console.error('Error updating wishlist in Firebase:', error));
     }
 
