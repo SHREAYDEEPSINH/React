@@ -1,0 +1,118 @@
+
+@font-face {
+  font-family: montreal;
+  /* src: url("./assets/Neue-Montreal/NeueMontreal-Regular.otf"); */
+  src: url("./assets/Aktiv-Grotesk/OTF/AktivGrotesk-Light.otf");
+}
+
+.font{
+  font-family: montreal  , sans-serif;
+}
+
+body{
+  font-family: montreal  , sans-serif;
+}
+
+.bg-light-green{
+  background-color: #4ADE80;
+}
+.light-green{
+  color: rgb(34,197,94) !important;
+}
+.bg-light-light-green{
+  background-color: #C2F7D5;
+}
+
+
+/* navbar  */
+.backdrop-nav{
+  backdrop-filter: blur(12px);
+}
+
+.git-button{
+  width: 36px;
+  height: 36px;
+}
+.toggle-btn{
+  width: 36px;
+  height: 36px;
+}
+
+
+
+/* home section  */
+.home{
+  z-index: 1;
+}
+.home-inner{
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+.home-inner > div > h1 {
+  font-size: 55px;
+  font-weight: 700 ;
+}
+
+.home-inner > div > h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+@media screen and (max-width : 992px) {
+  .home-inner > div > h1 {
+    font-size: 40px;
+  }
+  .home-inner > div > h3 {
+    font-size: 25px ;
+  }
+  
+}
+
+@media screen and (max-width : 720px) {
+  .home-inner > div > h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width : 635px) {
+  
+  .home-inner > div > h1 {
+    font-size: 30px;
+  }
+  /* .home-inner > div > h3 {
+    font-size: 20px ;
+  } */
+  
+}
+
+
+
+
+/* overview section  */
+
+
+.overview{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #EFEFEF;
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  /* padding: 20px 0; */
+  border-radius: 100px 0 0 0;
+  z-index: 2;
+}
+
+
+
+/* projects section  */
+
+.projects{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #161719;
+  border-radius: 0 100px 0 0;
+  z-index: 3;
+}
