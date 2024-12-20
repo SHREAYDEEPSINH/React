@@ -16,8 +16,8 @@ function Overview() {
                                 <p>Overview</p>
                                 <p className={`light-${theme}`}>Who am I</p>
                             </div>
-                            <h2 className=' fw-bold my-5'>
-                                I'm a full-stack developer passionate about building innovative web applications and digital experiences
+                            <h2 className='fs-2 fw-bold mt-5'>
+                                I’m a Full-Stack Developer passionate about building dynamic, user-friendly web applications. <br /><br /> I build scalable, efficient solutions that work seamlessly across all devices. <br /><br /> I’m always exploring new technologies to enhance my skills and love collaborating to deliver impactful results.
                             </h2>
 
                             {/* <button className={`btn ${texttheme}`}>Know more</button> */}

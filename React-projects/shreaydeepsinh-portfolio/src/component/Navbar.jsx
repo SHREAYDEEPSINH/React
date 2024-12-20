@@ -51,29 +51,31 @@ function Navbar({ color }) {
             </nav>
 
 
-            <div className="offcanvas offcanvas-end" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
-                <div className="offcanvas-header">
+            <div className={`offcanvas offcanvas-end bg-light-light-${theme} `} tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div className="offcanvas-header border-bottom border-dark">
+                    <span className='fw-bold fs'>Navigation</span>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0 offcanvas-body d-md-none">
-                    <li className="nav-item">
-                        <a className="nav-link active " style={{ color: color }} aria-current="page" href="#">Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" style={{ color: color }} aria-current="page" href="#about">About</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" style={{ color: color }} aria-current="page"
-                            href="#projects">Projects</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" style={{ color: color }} aria-current="page" href="#skills">Skills</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" style={{ color: color }} aria-current="page" href="#contact">Contact</a>
-                    </li>
-                </ul>
+                <div className="offcanvas-body">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 offcanvas-body d-md-none fw-bold">
+                        <li className="nav-item border-bottom border-dark rounded-2  ">
+                            <a className="nav-link active ms-2 bg-transparent" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li className="nav-item border-bottom border-dark rounded-2">
+                            <a className="nav-link active ms-2 bg-transparent" aria-current="page" href="#about">About</a>
+                        </li>
+                        <li className="nav-item border-bottom  border-dark rounded-2">
+                            <a className="nav-link active ms-2 bg-transparent" aria-current="page" href="#projects">Projects</a>
+                        </li>
+                        <li className="nav-item border-bottom  border-dark rounded-2">
+                            <a className="nav-link active ms-2 bg-transparent" aria-current="page" href="#skills">Skills</a>
+                        </li>
+                        <li className="nav-item border-bottom  border-dark rounded-2">
+                            <a className="nav-link active ms-2 bg-transparent" aria-current="page" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </>
     )
