@@ -262,7 +262,7 @@ function Projects({ setNavbarColor}) {
                       rel="noopener noreferrer"
                       className={`light-${theme} text-decoration-none d-flex align-items-center`}
                     >
-                      <span>View Project</span>{" "}
+                      <span>View Project</span>
                       <i className="fa-solid fa-arrow-right-long ms-2"></i>
                     </a>
                   </div>

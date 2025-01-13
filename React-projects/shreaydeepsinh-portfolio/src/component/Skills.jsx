@@ -14,9 +14,9 @@ function Skills({ setNavbarColor }) {
   const sectionRef = useRef(null);
 
   const themeColors = {
-    green: "#4ADE80", 
+    green: "#4ADE80",
     red: "#de6f4a",
-    yellow: "#dec84a", 
+    yellow: "#dec84a",
   };
 
 
@@ -37,7 +37,7 @@ function Skills({ setNavbarColor }) {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [setNavbarColor ,theme ]);
+  }, [setNavbarColor, theme]);
 
   return (
     <>
@@ -56,6 +56,10 @@ function Skills({ setNavbarColor }) {
               <div><img width={"50px"} src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="" /></div>
               <div><img width={"50px"} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="" /></div>
               <div><img width={"50px"} src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" alt="" /></div>
+              <div><img width={"60px"} src="https://logowik.com/content/uploads/images/nodejs-icon1721160486.logowik.com.webp" alt="" /></div>
+              <div><img width={"50px"} src="https://cdn.iconscout.com/icon/free/png-256/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-3030245.png" alt="" /></div>
+              <div><img width={"50px"} src="https://www.manektech.com/storage/developer/1646733543.webp" alt="" /></div>
+              <div><img width={"50px"} src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" alt="" /></div>
             </div>
           </div>
         </div>
