@@ -46,7 +46,7 @@
 //                 </div>
 //                 <div className='col-md-8 border-bottom d-flex justify-content-between gap-4'>
 //                   <h2 className=''>javaScript E-commerce Website</h2>
-//                   <a href="https://cheery-daffodil-52be00.netlify.app/" target='_blank' className='light-green text-decoration-none d-flex align-items-center View-Project-1'><span>View Project</span> <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
+//                   <a href="https://cheery-daffodil-52be00.netlify.app/" target='_blank' className='light-green text-decoration-none d-flex align-items-center View-Project-1'><span>View Project</span> <i className="fa-solid fa-arrow-right-long ms-2"></i></a>
 //                 </div>
 //               </div>
 
@@ -57,7 +57,7 @@
 //                 </div>
 //                 <div className='col-md-8 border-bottom d-flex justify-content-between gap-4'>
 //                   <h2 className=''>ReactJS E-commerce Website</h2>
-//                   <a href="https://painterecomweb.vercel.app/" target='_blank' className='light-green text-decoration-none d-flex align-items-center'><span>View Project</span> <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
+//                   <a href="https://painterecomweb.vercel.app/" target='_blank' className='light-green text-decoration-none d-flex align-items-center'><span>View Project</span> <i className="fa-solid fa-arrow-right-long ms-2"></i></a>
 //                 </div>
 //               </div>
 
@@ -68,7 +68,7 @@
 //                 </div>
 //                 <div className='col-md-8 border-bottom d-flex justify-content-between gap-4'>
 //                   <h2 className=''>Responsive HTML, CSS Website</h2>
-//                   <a href="https://jobfillter.netlify.app/" target='_blank' className='light-green text-decoration-none d-flex align-items-center'><span>View Project</span> <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
+//                   <a href="https://jobfillter.netlify.app/" target='_blank' className='light-green text-decoration-none d-flex align-items-center'><span>View Project</span> <i className="fa-solid fa-arrow-right-long ms-2"></i></a>
 //                 </div>
 //               </div>
 //             </div>

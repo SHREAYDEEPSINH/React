@@ -41,8 +41,8 @@ function Skills({ setNavbarColor }) {
 
   return (
     <>
-      <section class="skills sticky-top" id='skills' ref={sectionRef}>
-        <div class="container-md container-fluid">
+      <section className="skills sticky-top" id='skills' ref={sectionRef}>
+        <div className="container-md container-fluid">
           <div className='d-flex flex-column align-items-center justify-content-center'>
             <h2 className={`light-light-${theme} fw-bold fs-1 superpower`}>🎉 SUPERPOWER 🎉</h2>
             <p className='text-secondary fw-bold'>which I have</p>

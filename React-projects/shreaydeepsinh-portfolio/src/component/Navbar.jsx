@@ -59,19 +59,19 @@ function Navbar({ color }) {
 
                 <div className="offcanvas-body">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 offcanvas-body d-md-none fw-bold">
-                        <li className="nav-item border-bottom border-dark rounded-2  ">
+                        <li className="nav-item border-bottom border-dark rounded-2" data-bs-dismiss="offcanvas">
                             <NavLink className="nav-link active ms-2 bg-transparent" aria-current="page" to="/">Home</NavLink>
                         </li>
-                        <li className="nav-item border-bottom border-dark rounded-2">
-                            <NavLink className="nav-link active ms-2 bg-transparent" aria-current="page" to="/about">About</NavLink>
-                        </li>
-                        <li className="nav-item border-bottom  border-dark rounded-2">
+                        <li className="nav-item border-bottom  border-dark rounded-2" data-bs-dismiss="offcanvas">
                             <NavLink className="nav-link active ms-2 bg-transparent" aria-current="page" to="/projects">Projects</NavLink>
                         </li>
-                        <li className="nav-item border-bottom  border-dark rounded-2">
+                        <li className="nav-item border-bottom border-dark rounded-2" data-bs-dismiss="offcanvas">
+                            <NavLink className="nav-link active ms-2 bg-transparent" aria-current="page" to="/about">About</NavLink>
+                        </li>
+                        <li className="nav-item border-bottom  border-dark rounded-2" data-bs-dismiss="offcanvas">
                             <NavLink className="nav-link active ms-2 bg-transparent" aria-current="page" to="/skills">Skills</NavLink>
                         </li>
-                        <li className="nav-item border-bottom  border-dark rounded-2">
+                        <li className="nav-item border-bottom  border-dark rounded-2" data-bs-dismiss="offcanvas">
                             <NavLink className="nav-link active ms-2 bg-transparent" aria-current="page" to="/contact">Contact</NavLink>
                         </li>
                     </ul>

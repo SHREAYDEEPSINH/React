@@ -46,7 +46,7 @@ function Contact({setNavbarColor}) {
                     <div className='d-flex flex-column align-items-center gap-4'>
                         <div className='contact-icon'><img width={"180px"} src="https://durgeshbachhav.vercel.app/assets/img/shakehands-Kg0DP_dG.svg" alt="" /></div>
                         <div className='d-flex gap-3'>
-                            <a href="mailto:shreaydeepsinhvaghela@gmail.com" className='text-decoration-none'><button className='btn btn-dark rounded-5 fs-5  px-md-4 px-3 d-flex align-items-center'><i class="fa-regular fa-envelope fs-4 me-2"></i> Email Me</button></a>
+                            <a href="mailto:shreaydeepsinhvaghela@gmail.com" className='text-decoration-none'><button className='btn btn-dark rounded-5 fs-5  px-md-4 px-3 d-flex align-items-center'><i className="fa-regular fa-envelope fs-4 me-2"></i> Email Me</button></a>
                             <a href="https://wa.me/+91738373838" target='_blank' className='text-decoration-none'><button className={`btn  bg-light-${theme} rounded-5 fs-5 px-md-4 px-3 whatsAppbtn`}>WhatsApp</button></a>
                         </div>
                         <h2 className='linkedin-contact'><a href="https://www.linkedin.com/in/shreaydeepsinh-vaghela-6a271613a/" target='_blank' className={`text-decoration-none fw-bold light-${theme}`}>LINKEDIN</a></h2>
