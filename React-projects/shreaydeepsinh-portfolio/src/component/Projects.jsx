@@ -12,71 +12,42 @@ const projects = [
   { id: 'image3', title: 'Job Filter', description: 'Responsive HTML, CSS Website', link: 'https://jobfillter.netlify.app/', imgSrc: '/Screenshot 2024-12-16 213914.png' },
 ];
 
-function Projects({ setNavbarColor }) {
-
+function Projects({ setNavbarColor}) {
+  
   const { theme } = useTheme();
-
 
   const [hoveredImage, setHoveredImage] = useState(null);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const sectionRef = useRef(null);
 
-
-
   const themeColors = {
-    green: "#4ADE80",
+    green: "#4ADE80", 
     red: "#de6f4a",
-    yellow: "#dec84a",
+    yellow: "#dec84a", 
   };
 
-  // useEffect(() => {
-
-  //   // Create ScrollTrigger for color change
-  //   ScrollTrigger.create({
-  //     trigger: sectionRef.current,
-  //     start: "top 40px",
-  //     end: "bottom 40px",
-  //     onEnter: () => setNavbarColor(themeColors[theme]), // Use theme color or fallback
-  //     onLeaveBack: () => setNavbarColor("#333"), // Default color when leaving back
-  //     onLeave: () => setNavbarColor("#333"), // Default color when leaving
-  //     onEnterBack: () => setNavbarColor(themeColors[theme])
-  //   });
-
-  //   // Cleanup ScrollTrigger instance on unmount
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, [setNavbarColor , theme]);
-
-  // const handleMouseMove = (e) => {
-  //   setCursorPosition({ x: e.clientX, y: e.clientY });
-  // };
-
-
   useEffect(() => {
-    if (typeof window !== "undefined" && sectionRef.current) {
-      import("gsap/ScrollTrigger").then((module) => {
-        const ScrollTrigger = module.ScrollTrigger;
-        gsap.registerPlugin(ScrollTrigger);
 
-        ScrollTrigger.create({
-          trigger: sectionRef.current,
-          start: "top 40px",
-          end: "bottom 40px",
-          onEnter: () => setNavbarColor(themeColors[theme]),
-          onLeaveBack: () => setNavbarColor("#333"),
-          onLeave: () => setNavbarColor("#333"),
-          onEnterBack: () => setNavbarColor(themeColors[theme]),
-        });
-      });
-    }
+    // Create ScrollTrigger for color change
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top 40px",
+      end: "bottom 40px",
+      onEnter: () => setNavbarColor(themeColors[theme]), // Use theme color or fallback
+      onLeaveBack: () => setNavbarColor("#333"), // Default color when leaving back
+      onLeave: () => setNavbarColor("#333"), // Default color when leaving
+      onEnterBack: () => setNavbarColor(themeColors[theme])
+    });
 
+    // Cleanup ScrollTrigger instance on unmount
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [setNavbarColor, theme]);
+  }, [setNavbarColor , theme]);
 
-
+  const handleMouseMove = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+  };
 
 
   return (
