@@ -97,7 +97,7 @@ function Projectpage() {
                           <div className="card project-card border-0 rounded-4">
                             <Link className='image-height' to={project.link} target='_blank'> 
                             <img
-                              src={`/${project.imageSrc}`}
+                              src={`src/assets/${project.imageSrc}`}
                               className="card-img-top h-100 object-fit-fill"
                               alt={project.title}
                             />

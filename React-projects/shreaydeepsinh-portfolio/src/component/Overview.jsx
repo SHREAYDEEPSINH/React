@@ -10,7 +10,7 @@ function Overview() {
                 <div className="container-md container-fluid " >
                     <div className='row align-items-center flex-column-reverse flex-md-row'>
                         <div className='col-md-6 d-flex justify-content-center '>
-                            <img width={"90%"} src="public/self-Bsv3AQWc.svg" alt="" />
+                            <img width={"90%"} src="/self-Bsv3AQWc.svg" alt="" />
                         </div>
                         <div className='col-md-5 p-5 p-md-3'>
                             <div className="lh-1">
