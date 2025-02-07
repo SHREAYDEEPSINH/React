@@ -11,55 +11,49 @@ function Projectpage() {
     const workBoxesRef = useRef([]);
 
     useGSAP(() => {
-        if (typeof window !== "undefined" && workContainerRef.current) {
-            const ScrollTrigger = module.ScrollTrigger;
-            gsap.registerPlugin(ScrollTrigger);
+        
+        let translateX;
 
-            import("gsap/ScrollTrigger").then((module) => {
-                let translateX;
-
-                // Calculate the horizontal scroll width dynamically
-                function setTranslateX() {
-                    if (workContainerRef.current && workBoxesRef.current.length) {
-                        const box = workBoxesRef.current;
-                        console.log(box, "box")
-                        const rect = box[0].getBoundingClientRect();
-                        console.log(rect, "rect")
-                        const parentWidth = workContainerRef.current.getBoundingClientRect().width;
-                        console.log(parentWidth, "parantWidth")
-                        translateX = rect.width * box.length - parentWidth + 250;
-                        console.log(translateX, "translateX")
-                    }
-                }
-
-                setTranslateX();  // Calculate the translateX when the component is mounted
-
-                // GSAP timeline for scroll trigger
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".work-section",  // Trigger scroll when the section is in view
-                        start: "center center",  // Start pinning when the top of the section reaches the top of the viewport
-                        end: `+=${translateX}`,  // End scroll once the horizontal scroll is complete
-                        scrub: true,  // Smooth scrolling
-                        pin: true,  // Pin the section
-                        pinType: "fixed",  // Pin using fixed positioning during the scroll
-                        id: "work",
-                    },
-                });
-                // Move the work-flex horizontally based on scroll
-                timeline.to(".work-flex", {
-                    x: -translateX,  // Move the work-flex to the left
-                    duration: 1000,  // Optional, depending on your preference for speed
-                    delay: 1.2,
-                });
-            })
-
-
-            // Cleanup function to kill ScrollTrigger instance on unmount
-            // return () => {
-            // ScrollTrigger.getById("work").kill();
-            // };
+        // Calculate the horizontal scroll width dynamically
+        function setTranslateX() {
+            if (workContainerRef.current && workBoxesRef.current.length) {
+                const box = workBoxesRef.current;
+                console.log(box ,"box")
+                const rect = box[0].getBoundingClientRect();
+                console.log(rect , "rect")
+                const parentWidth = workContainerRef.current.getBoundingClientRect().width;
+                console.log(parentWidth ,"parantWidth")
+                translateX = rect.width * box.length - parentWidth + 250;
+                console.log(translateX , "translateX")
+            }
         }
+
+        setTranslateX();  // Calculate the translateX when the component is mounted
+
+        // GSAP timeline for scroll trigger
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".work-section",  // Trigger scroll when the section is in view
+                start: "center center",  // Start pinning when the top of the section reaches the top of the viewport
+                end: `+=${translateX}`,  // End scroll once the horizontal scroll is complete
+                scrub: true,  // Smooth scrolling
+                pin: true,  // Pin the section
+                pinType: "fixed",  // Pin using fixed positioning during the scroll
+                id: "work",
+            },
+        });
+
+        // Move the work-flex horizontally based on scroll
+        timeline.to(".work-flex", {
+            x: -translateX,  // Move the work-flex to the left
+            duration: 1000,  // Optional, depending on your preference for speed
+            delay: 1.2,
+        });
+
+        // Cleanup function to kill ScrollTrigger instance on unmount
+        // return () => {
+            // ScrollTrigger.getById("work").kill();
+        // };
     }, []);
 
 
@@ -82,9 +76,9 @@ function Projectpage() {
             link: 'https://jobfillter.netlify.app/',
             description: "Responsive HTML, CSS Website"
         },
-
+       
     ];
-
+    
 
 
     return (
@@ -100,21 +94,21 @@ function Projectpage() {
                     <div className="d-flex my-5 py-5 justify-content-center align-items-center  project-card-main work-flex ">
                         {/* Loop through 15 projects */}
                         {projects.map((project, index) => (
-                            <div key={index} className="work-box" ref={(el) => (workBoxesRef.current[index] = el)}>
-                                <div className="card project-card border-0 rounded-4">
-                                    <Link className='image-height' to={project.link} target='_blank'>
-                                        <img
-                                            src={`/${project.imageSrc}`}
-                                            className="card-img-top h-100 object-fit-fill"
-                                            alt={project.title}
-                                        />
-                                    </Link>
-                                    <div className="card-body d-flex flex-column justify-content-center">
-                                        <h4 className="card-title fw-bold">{project.title}</h4>
-                                        <p className="card-text">{project.description}</p>
-                                    </div>
-                                </div>
-                            </div>
+                          <div key={index} className="work-box" ref={(el) => (workBoxesRef.current[index] = el)}>
+                          <div className="card project-card border-0 rounded-4">
+                            <Link className='image-height' to={project.link} target='_blank'> 
+                            <img
+                              src={`/${project.imageSrc}`}
+                              className="card-img-top h-100 object-fit-fill"
+                              alt={project.title}
+                            />
+                            </Link>
+                             <div className="card-body d-flex flex-column justify-content-center">
+                                 <h4 className="card-title fw-bold">{project.title}</h4>
+                                 <p className="card-text">{project.description}</p>
+                             </div>
+                        </div>
+                    </div>
                         ))}
                     </div>
                 </div>
