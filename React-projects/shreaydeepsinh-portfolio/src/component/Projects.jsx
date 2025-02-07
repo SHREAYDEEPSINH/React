@@ -178,9 +178,9 @@ import { useTheme } from './ThemeContext';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { id: 'image1', title: 'FIBER CABLE DIRECT', description: 'JavaScript E-commerce Website', link: 'https://cheery-daffodil-52be00.netlify.app/', imgSrc: 'src/assets/image.png' },
-  { id: 'image2', title: 'Painter', description: 'ReactJS E-commerce Website', link: 'https://painterecomweb.vercel.app/', imgSrc: 'src/assets/Screenshot 2024-12-16 213847.png' },
-  { id: 'image3', title: 'Job Filter', description: 'Responsive HTML, CSS Website', link: 'https://jobfillter.netlify.app/', imgSrc: 'src/assets/Screenshot 2024-12-16 213914.png' },
+  { id: 'image1', title: 'FIBER CABLE DIRECT', description: 'JavaScript E-commerce Website', link: 'https://cheery-daffodil-52be00.netlify.app/', imgSrc: '/image.png' },
+  { id: 'image2', title: 'Painter', description: 'ReactJS E-commerce Website', link: 'https://painterecomweb.vercel.app/', imgSrc: '/Screenshot 2024-12-16 213847.png' },
+  { id: 'image3', title: 'Job Filter', description: 'Responsive HTML, CSS Website', link: 'https://jobfillter.netlify.app/', imgSrc: '/Screenshot 2024-12-16 213914.png' },
 ];
 
 function Projects({ setNavbarColor}) {
