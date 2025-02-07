@@ -122,58 +122,11 @@
 
 
 
-// // import React, { useEffect, useRef } from 'react';
-// // import gsap from 'gsap';
-// // import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// // gsap.registerPlugin(ScrollTrigger);
-
-// // function Projectpage() {
-
-
-// //     return (
-// //         <>
-// //             <section>
-// //                 <div className='pageHeading'>
-// //                     <h2>PROJECTS.</h2>
-// //                 </div>
-// //             </section>
-
-// //             <section className='projectpage-main work-section' id='work'>
-// //                 <div className='container-md container-fluid work-container' >
-// //                     <div className="d-flex my-5 py-5 justify-content-center align-items-center  project-card-main work-flex ">
-                        
-// //                             <div  className="work-box" >
-// //                                 <div className="card project-card border-0 rounded-4">
-// //                                     <img
-// //                                         src={``}
-// //                                         className="card-img-top h-75 object-fit-fill"
-// //                                         alt={``}
-// //                                     />
-// //                                     <div className="card-body">
-// //                                         <h5 className="card-title">Card title</h5>
-// //                                         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-// //                                     </div>
-// //                                 </div>
-// //                             </div>
-// //                     </div>
-// //                 </div>
-// //             </section>
-// //         </>
-// //     );
-// // }
-
-// // export default Projectpage;
-
-
-
-
-
-
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,7 +134,7 @@ function Projectpage() {
     const workContainerRef = useRef(null);
     const workBoxesRef = useRef([]);
 
-    useEffect(() => {
+    useGSAP(() => {
         if (typeof window !== "undefined" && workContainerRef.current) {
             import("gsap/ScrollTrigger").then((module) => {
                 const ScrollTrigger = module.ScrollTrigger;
@@ -220,9 +173,9 @@ function Projectpage() {
                     duration: 1,
                 });
 
-                // return () => {
-                //     ScrollTrigger.getById("work")?.kill();
-                // };
+                return () => {
+                    ScrollTrigger.getById("work")?.kill();
+                };
             });
         }
     }, []);
@@ -280,4 +233,9 @@ function Projectpage() {
 }
 
 export default Projectpage;
+
+
+
+
+
 
