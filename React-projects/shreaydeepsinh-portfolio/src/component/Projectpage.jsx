@@ -220,9 +220,9 @@ function Projectpage() {
                     duration: 1,
                 });
 
-                return () => {
-                    ScrollTrigger.getById("work")?.kill();
-                };
+                // return () => {
+                //     ScrollTrigger.getById("work")?.kill();
+                // };
             });
         }
     }, []);
