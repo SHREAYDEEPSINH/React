@@ -10,7 +10,7 @@ function Home() {
             <section>
                 <div className='homemain d-flex align-items-center position-relative'>
                     <div className='container' >
-                        <div id="carouselExampleIndicators" class="carousel slide" >
+                        <div id="carouselExampleIndicators" className="carousel slide" >
                             <div className="carousel-indicators mb-5">
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -29,8 +29,6 @@ function Home() {
                                                     <p className="">Lorem ipsum dolor sit amet, conscetur adipiscing elit, sed do eimod <br /> tempor incididunt ut labore et dolore magna aliqua Quis</p>
                                                     <span className='d-flex align-items-center justify-content-center justify-content-md-start'>
                                                         <button className=' rounded border-0 text-white me-5'>Order Now</button>
-                                                        <button className='rounded rounded-5 border-0 me-4'></button>
-                                                        <h5 className='m-0 fs-6 fw-bolder'>Watch Video</h5>
                                                     </span>
                                                 </div>
                                             </div>
@@ -50,8 +48,6 @@ function Home() {
                                                     <p className="">Lorem ipsum dolor sit amet, conscetur adipiscing elit, sed do eimod <br /> tempor incididunt ut labore et dolore magna aliqua Quis</p>
                                                     <span className='d-flex align-items-center justify-content-center justify-content-md-start'>
                                                         <button className=' rounded border-0 text-white me-5'>Order Now</button>
-                                                        <button className='rounded rounded-5 border-0 me-4'></button>
-                                                        <h5 className='m-0 fs-6 fw-bolder'>Watch Video</h5>
                                                     </span>
                                                 </div>
                                             </div>
@@ -71,8 +67,6 @@ function Home() {
                                                     <p className="">Lorem ipsum dolor sit amet, conscetur adipiscing elit, sed do eimod <br /> tempor incididunt ut labore et dolore magna aliqua Quis</p>
                                                     <span className='d-flex align-items-center justify-content-center justify-content-md-start'>
                                                         <button className=' rounded border-0 text-white me-5'>Order Now</button>
-                                                        <button className='rounded rounded-5 border-0 me-4'></button>
-                                                        <h5 className='m-0 fs-6 fw-bolder'>Watch Video</h5>
                                                     </span>
                                                 </div>
                                             </div>

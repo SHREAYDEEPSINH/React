@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 
-function Navbarprops(props ) {
+function Navbarprops(props) {
 
 
     return (

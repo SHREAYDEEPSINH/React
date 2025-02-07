@@ -352,6 +352,9 @@ body{
   gap: 4rem; /* Adjust the gap between boxes as needed */
 }
 
+.image-height{
+  height: 60%;
+}
 
 
 @media screen and (width < 992px) {

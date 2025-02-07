@@ -20,7 +20,7 @@ function Navbar() {
                             <Navbarprops  title="Pages" />
                             <Navbarprops  title="Contact" />
                             <li className='me-4 ms-1'>
-                                <i class="bi bi-search"></i>
+                                <i className="bi bi-search"></i>
                             </li>
                             <li className='d-flex gap-3 align-items-center'>
                                 <img src="src/Assets/callicon.png" alt="" />
