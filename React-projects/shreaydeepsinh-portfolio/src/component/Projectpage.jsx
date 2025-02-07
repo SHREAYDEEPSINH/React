@@ -14,7 +14,7 @@ function Projectpage() {
         if (typeof window !== "undefined" && workContainerRef.current) {
             const ScrollTrigger = module.ScrollTrigger;
             gsap.registerPlugin(ScrollTrigger);
-            
+
             import("gsap/ScrollTrigger").then((module) => {
                 let translateX;
 
@@ -46,14 +46,14 @@ function Projectpage() {
                         id: "work",
                     },
                 });
+                // Move the work-flex horizontally based on scroll
+                timeline.to(".work-flex", {
+                    x: -translateX,  // Move the work-flex to the left
+                    duration: 1000,  // Optional, depending on your preference for speed
+                    delay: 1.2,
+                });
             })
 
-            // Move the work-flex horizontally based on scroll
-            timeline.to(".work-flex", {
-                x: -translateX,  // Move the work-flex to the left
-                duration: 1000,  // Optional, depending on your preference for speed
-                delay: 1.2,
-            });
 
             // Cleanup function to kill ScrollTrigger instance on unmount
             // return () => {
