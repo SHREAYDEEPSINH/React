@@ -24,6 +24,7 @@ const auth = (req, res, next) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Authentication failed", error: error.message });
+    res.send("/login")
   }
 };
 

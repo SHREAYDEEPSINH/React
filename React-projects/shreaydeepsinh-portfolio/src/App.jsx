@@ -17,7 +17,6 @@ import Contactpage from './component/Contactpage';
 import Skillspage from './component/Skillspage';
 
 
-
 function App() {
 
   const [navbarColor, setNavbarColor] = useState("#333");
