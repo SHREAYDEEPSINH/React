@@ -10,24 +10,27 @@ const path = require("path")
 
 dotenv.config()
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:5173", // Allow only your frontend origin
+    credentials: true, // If you're using cookies or authentication headers
+}))
 app.use(express.json())
 
-app.use(express.urlencoded()) 
+app.use(express.urlencoded())
 
-app.use("/user" , userRouter)
-app.use("/product" , productRouter)
-app.use("/uploads" , express.static(path.join(__dirname ,"uploads")))
+app.use("/user", userRouter)
+app.use("/product", productRouter)
+app.use("/uploads", express.static(path.join(__dirname, "uploads")))
 app.use(auth)
-app.use("/cart" , cartRouter)
+app.use("/cart", cartRouter)
 
 
 
-app.listen(process.env.PORT , (error)=>{
-    if(error){
+app.listen(process.env.PORT, (error) => {
+    if (error) {
         console.log(error)
     }
-    else{
+    else {
         connection()
         console.log(`server run on ${process.env.PORT}`)
     }
