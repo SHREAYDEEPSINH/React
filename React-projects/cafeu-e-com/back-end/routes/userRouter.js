@@ -6,18 +6,6 @@ const jwt = require("jsonwebtoken");
 const UserModel = require("../models/userModel");
 
 
-userRouter.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Change "*" to your frontend URL in production
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  
-  if (req.method === "OPTIONS") {
-      return res.status(200).end();
-  }
-  next();
-});
-
-
 userRouter.post("/register" , async (req,res)=>{
     try {
         const existEmail = await UserModel.findOne({email : req.body.email})
@@ -55,7 +43,6 @@ userRouter.post("/login" , async (req,res)=>{
         return res.status(400).json({ message: err });
       }
 })
-
 
 
 module.exports = userRouter
