@@ -15,8 +15,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node index.js",
-    "vercel-build": "npm install"
+    "server": "node index.js"
   },
   "keywords": [],
   "author": "",
