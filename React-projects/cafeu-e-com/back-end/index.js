@@ -10,10 +10,7 @@ const path = require("path")
 
 dotenv.config()
 const app = express()
-app.use(cors({
-    origin: "http://localhost:5173", // Allow only your frontend origin
-    credentials: true, // If you're using cookies or authentication headers
-}))
+app.use(cors())
 app.use(express.json())
 
 app.use(express.urlencoded())
