@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -12,7 +13,7 @@ const projects = [
   { id: 'image3', title: 'Job Filter', description: 'Responsive HTML, CSS Website', link: 'https://jobfillter.netlify.app/', imgSrc: '/Screenshot 2024-12-16 213914.png' },
 ];
 
-function Projects({ setNavbarColor}) {
+function Projects({setNavbarColor}) {
   
   const { theme } = useTheme();
 
@@ -111,4 +112,5 @@ function Projects({ setNavbarColor}) {
 }
 
 export default Projects;
+
 

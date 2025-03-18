@@ -1,8 +1,10 @@
+
 import React, { useState } from 'react'
 import Navbar from './component/Navbar'
 import {
   createBrowserRouter,
   RouterProvider,
+  ScrollRestoration,
 } from "react-router-dom";
 import "./App.css"
 import Home from './component/Home';
@@ -25,25 +27,28 @@ function App() {
     {
       path: "/",
       element: <ThemeProvider>
+        <ScrollRestoration/>
         <Navbar color={navbarColor} />
         <Home/>
         <Overview />
         <Projects setNavbarColor={setNavbarColor} />
         <Skills setNavbarColor={setNavbarColor} />
-        <Contact/>
+        <Contact setNavbarColor={setNavbarColor}/>
       </ThemeProvider>,
     },
     {
       path: "/projects",
       element: <ThemeProvider>
+        <ScrollRestoration/>
         <Navbar color={navbarColor} />
         <Projectpage/>
-        <Contact/>
+        <Contact setNavbarColor={setNavbarColor}/>
       </ThemeProvider>,
     },
     {
       path: "/about",
       element: <ThemeProvider>
+        <ScrollRestoration/>
         <Navbar color={navbarColor} />
         <Aboutpage/>
         <Contact/>
@@ -52,6 +57,7 @@ function App() {
     {
       path: "/contact",
       element: <ThemeProvider>
+        <ScrollRestoration/>
         <Navbar color={navbarColor} />
         <Contactpage/>
         <Contact/>
@@ -60,6 +66,7 @@ function App() {
     {
       path: "/skills",
       element: <ThemeProvider>
+        <ScrollRestoration/>
         <Navbar color={navbarColor} />
         <Skillspage/>
         <Contact/>

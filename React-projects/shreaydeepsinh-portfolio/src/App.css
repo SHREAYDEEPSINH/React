@@ -220,10 +220,6 @@ body{
   align-items: center;
   border-radius: 100px 100px 0 0;
 }
-/* .superpower{
-  
-} */
-
 
 
 /* Contact section  */
@@ -321,45 +317,60 @@ body{
 
 /* projectpage   */
 
+
 .projectpage-main{
   width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden; /* Hide overflow for the section */
+  height: auto; 
+}
+
+.project-image{
+  height: 300px;
+}
+
+.project-card > div > p {
+  font-size: 30px ;
 }
 
 
-.project-card{
-  height: 400px;
-  width: 450px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-  box-shadow: rgba(0.45, 0, 0, 0.2) 0px -60px 40px -7px inset;
+@media screen and (width < 1200px) {
 
-  /* box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset; */
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
-
-.work-container {
-  display: flex;
-  width: 100%; /* Ensure it takes full width of the viewport */
-}
-
-.work-flex {
-  display: flex;
-  gap: 4rem; /* Adjust the gap between boxes as needed */
-}
-
-.image-height{
-  height: 60%;
+  .project-image{
+    height: 250px;
+  }
 }
 
 
 @media screen and (width < 992px) {
+
+  .project-card > div > h5 {
+    font-size: 18px !important;
+  }
+  .project-card > div > p {
+    font-size: 22px;
+  }
+  .project-image{
+    height: 200px;
+  }
+
+}
+
+@media screen and (width < 768px) {
+
+  .project-image{
+    height: auto;
+  }
   .project-card{
-    height:auto;
-    width: 370px;
+    margin: 0px 20px;
+  }
+}
+
+
+@media screen and (width < 576px) {
+
+  .project-card > div > h5 {
+    font-size: 15px !important;
+  }
+  .project-card > div > p {
+    font-size: 19px;
   }
 }

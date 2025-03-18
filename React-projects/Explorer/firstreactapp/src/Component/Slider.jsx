@@ -10,13 +10,13 @@ function Slider() {
             </div>
             <div className="carousel-inner" >
                 <div className="carousel-item active">
-                    <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640772.jpg&fm=jpg" className="d-block w-100 object-fit-cover" style={{ height: 530 }} alt="..." />
+                    <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=pexels-ella-olsson-572949-1640772.jpg&fm=jpg" className="d-block w-100 object-fit-cover" style={{ height: 500 }} alt="..." />
                 </div>
                 <div className="carousel-item" >
-                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" className="d-block w-100 object-fit-cover" style={{ height: 530 }} alt="..." />
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" className="d-block w-100 object-fit-cover" style={{ height: 500 }} alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://img.freepik.com/free-photo/indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18716.jpg?w=1380&t=st=1720335552~exp=1720336152~hmac=4def7cef5cce347602bdb7b69683d9ded2d468c7111016c56d053ce306fe666d" className="d-block w-100 object-fit-fill" style={{ height: 530 }} alt="..." />
+                    <img src="https://img.freepik.com/free-photo/indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18716.jpg?w=1380&t=st=1720335552~exp=1720336152~hmac=4def7cef5cce347602bdb7b69683d9ded2d468c7111016c56d053ce306fe666d" className="d-block w-100 object-fit-cover" style={{ height: 500 }} alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
