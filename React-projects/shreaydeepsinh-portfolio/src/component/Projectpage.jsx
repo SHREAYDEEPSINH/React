@@ -11,7 +11,7 @@ function Projectpage() {
 
     const projects = [
         {
-            imageSrc: "public/Screenshot 2025-03-13 164003.png",
+            imageSrc: "Screenshot 2025-03-13 164003.png",
             title: "Cafeu",
             link: 'https://cafeu-e-com-frontend.vercel.app/',
             description: "Cafeu Full stack website",
@@ -26,7 +26,7 @@ function Projectpage() {
 
         },
         {
-            imageSrc: "public/Screenshot 2025-03-18 232039.png",
+            imageSrc: "Screenshot 2025-03-18 232039.png",
             title: "Painter",
             link: 'https://painterecomweb.vercel.app/',
             description: "ReactJS E-commerce Website",
@@ -42,7 +42,7 @@ function Projectpage() {
 
         },
         {
-            imageSrc: "public/Screenshot 2025-03-18 221435.png",
+            imageSrc: "Screenshot 2025-03-18 221435.png",
             title: "React first web",
             link: 'https://react-first-web-delta.vercel.app/',
             description: "React's First Website with Responsive Component",
