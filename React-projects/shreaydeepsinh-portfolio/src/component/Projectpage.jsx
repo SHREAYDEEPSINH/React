@@ -2,15 +2,16 @@
 
 
 import { Link } from 'react-router-dom';
+import { useTheme } from './ThemeContext';
 
 
 function Projectpage() {
-
+    const { theme } = useTheme();
 
 
     const projects = [
         {
-            imageSrc: "src/assets/Screenshot 2025-03-13 164003.png",
+            imageSrc: "public/Screenshot 2025-03-13 164003.png",
             title: "Cafeu",
             link: 'https://cafeu-e-com-frontend.vercel.app/',
             description: "Cafeu Full stack website",
@@ -25,7 +26,7 @@ function Projectpage() {
 
         },
         {
-            imageSrc: "Screenshot 2024-12-16 213847.png",
+            imageSrc: "public/Screenshot 2025-03-18 232039.png",
             title: "Painter",
             link: 'https://painterecomweb.vercel.app/',
             description: "ReactJS E-commerce Website",
@@ -40,8 +41,14 @@ function Projectpage() {
             tech: "HTML, CSS, Bootstrap"
 
         },
+        {
+            imageSrc: "public/Screenshot 2025-03-18 221435.png",
+            title: "React first web",
+            link: 'https://react-first-web-delta.vercel.app/',
+            description: "React's First Website with Responsive Component",
+            tech: "React and Bootstrap"
 
-
+        },
 
     ];
 
@@ -59,15 +66,15 @@ function Projectpage() {
                 <div className='container-md container-fluid w-100'>
                     <div className="row row-cols-1 row-cols-md-2 g-4 py-5">
                         {projects.map((project, index) =>
-                           
+
                             <div key={index} className="col">
-                                <div className="card border-0 project-card">
+                                <div className="card border-0 rounded-5 project-card ">
                                     <Link to={project.link}>
-                                        <img src={project.imageSrc} className=" card-img-top rounded-5 project-image" alt="..." />
+                                        <img src={project.imageSrc} className={`card-img-top rounded-5 project-image `} alt="..." />
                                     </Link>
-                                    <div className="card-body">
-                                        <h5 className="card-title mb-1 mt-2">{project.title}</h5>
-                                        <p className="card-text mb-1 fw-bold">{project.description.toLocaleUpperCase()}.</p>
+                                    <div className={`card-body`}>
+                                        <h5 className={`card-title mb-1 mt-2`}>{project.title}</h5>
+                                        <p className={`card-text mb-1 fw-bold `}>{project.description.toLocaleUpperCase()}.</p>
                                         <h6 className="card-text ">Tech : {project.tech}</h6>
                                     </div>
                                 </div>
