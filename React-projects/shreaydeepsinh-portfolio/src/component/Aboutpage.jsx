@@ -18,8 +18,8 @@ function Aboutpage() {
                         <p>
                             My Expertise <br />
                             <ul>
-                                <li> Front-End Development: Proficient in React.js, HTML5, CSS3, and JavaScript (ES6+), with a focus on crafting seamless and accessible user interfaces.</li>
-                                <li>Back-End Development: Experienced in Node.js, Express.js, and RESTful API development, ensuring secure and scalable server-side functionality.</li>
+                                <li>Front-End Development: Proficient in React.js, HTML5, CSS3, and JavaScript (ES6+), with a focus on crafting seamless and accessible user interfaces.</li>
+                                <li>Back-End Development: Skilled in Node.js, Express.js, and RESTful API development, ensuring secure and scalable server-side functionality.</li>
                                 <li>Database Management: Skilled in MongoDB and Mongoose, designing efficient schemas and ensuring smooth data integration.</li>
                             </ul>
                         
